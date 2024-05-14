@@ -94,7 +94,7 @@ class TransactionsAnalysis:
 
     def get_transactions_by_api(self, cursor, start=0, end=0):
         count = start
-        if end == 0:
+        if end == 0 or end > len(cursor):
             end = len(cursor)
         cursor = cursor[start: end]
         for doc in cursor:
@@ -176,8 +176,11 @@ class TransactionsAnalysis:
 
             print(result)
 
-    def get_tokens_of_wallets_chainbase(self, cursor):
-        count = 0
+    def get_tokens_of_wallets_chainbase(self, cursor, start=0, end=0):
+        count = start
+        if end == 0 or end > len(cursor):
+            end = len(cursor)
+        cursor = cursor[start: end]
         for doc in cursor:
             page = 1
             tokens = doc.get('newTokens', [])
@@ -197,8 +200,9 @@ class TransactionsAnalysis:
                     page += 1
                     data = self.get_data(address, page)
                     tokens = tokens + data
-                user = {"_id": doc.get('_id'), "newTokens": tokens}
+                user = {"_id": "0x1_" + address, "newTokens": tokens, 'address': address}
                 print(len(tokens))
+                # print(user)
                 self._db.update_social_user(user)
             except:
                 print("Continue")
@@ -206,7 +210,7 @@ class TransactionsAnalysis:
     @classmethod
     def get_data(cls, address, page):
 
-        url = f"https://api.chainbase.online/v1/account/tokens?chain_id=56&address={address}&limit=100&page={page}"
+        url = f"https://api.chainbase.online/v1/account/tokens?chain_id=1&address={address}&limit=100&page={page}"
         headers = {
             "accept": "application/json",
             "x-api-key": "2g5g889KGLeY7I3k8lSqQ98Aq5l"
