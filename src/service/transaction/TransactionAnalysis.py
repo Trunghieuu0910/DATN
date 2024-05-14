@@ -92,9 +92,11 @@ class TransactionsAnalysis:
 
             return res
 
-    def get_transactions_by_api(self, cursor):
-        count = 0
-
+    def get_transactions_by_api(self, cursor, start=0, end=0):
+        count = start
+        if end == 0:
+            end = len(cursor)
+        cursor = cursor[start: end]
         for doc in cursor:
             address = doc.get('address', None)
             if not address:
@@ -102,23 +104,21 @@ class TransactionsAnalysis:
 
             print(f"Execute address {address} {count}")
             count += 1
-            if count < 100:
-                continue
             try:
-                url = f'https://api.bscscan.com/api?module=account&action=txlist&address={address}&startblock=0&endblock=99999999&page=1&offset=10000&sort=asc&apikey={self.api_key}'
+                url = f'https://api.etherscan.io/api?module=account&action=txlist&address={address}&startblock=0&endblock=99999999&page=1&offset=10000&sort=asc&apikey={self.api_key}'
                 response = requests.get(url)
                 data = dict(response.json())
                 transactions = data.get('result')
-                doc['0x38'] = {}
+                user = {'0x1': {}, '_id': '0x1_' + address, 'chainId': '0x1', 'regional': doc.get('regional')}
                 for tx in transactions:
                     if tx.get('from') == address:
-                        doc['0x38'][tx.get('hash')] = {'timestamp': tx.get('timeStamp'), 'value': tx.get('value', 0),
+                        user['0x1'][tx.get('hash')] = {'timestamp': tx.get('timeStamp'), 'value': tx.get('value', 0),
                                                        'gas': tx.get('gas', 0), 'gas_price': doc.get('gasPrice', 0)}
 
-                self._db.update_social_user(doc)
-            except:
+                self._db.update_social_user(user)
+            except Exception as e:
                 print(f"ERROR address {address} {count}")
-
+                logger.exception(e)
     def get_balance_by_api(self, cursor):
         count = 0
         sub_count = 0
