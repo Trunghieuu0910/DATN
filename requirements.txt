@@ -4,3 +4,4 @@ pymongo==4.6.2
 beautifulsoup4==4.11.1
 python-dotenv==1.0.1
 web3==6.15.1
+redis==5.0.1
