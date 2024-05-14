@@ -1,0 +1,2510 @@
+[
+    {
+        "Country Code": "AF",
+        "Country Name": "Afghanistan",
+        "Time Zone": "Asia/Kabul",
+        "UTC Offset": "UTC +04:30"
+    },
+    {
+        "Country Code": "AL",
+        "Country Name": "Albania",
+        "Time Zone": "Europe/Tirane",
+        "UTC Offset": "UTC +01:00"
+    },
+    {
+        "Country Code": "DZ",
+        "Country Name": "Algeria",
+        "Time Zone": "Africa/Algiers",
+        "UTC Offset": "UTC +01:00"
+    },
+    {
+        "Country Code": "AS",
+        "Country Name": "American Samoa",
+        "Time Zone": "Pacific/Pago_Pago",
+        "UTC Offset": "UTC -11:00"
+    },
+    {
+        "Country Code": "AD",
+        "Country Name": "Andorra",
+        "Time Zone": "Europe/Andorra",
+        "UTC Offset": "UTC +01:00"
+    },
+    {
+        "Country Code": "AO",
+        "Country Name": "Angola",
+        "Time Zone": "Africa/Luanda",
+        "UTC Offset": "UTC +01:00"
+    },
+    {
+        "Country Code": "AI",
+        "Country Name": "Anguilla",
+        "Time Zone": "America/Anguilla",
+        "UTC Offset": "UTC -04:00"
+    },
+    {
+        "Country Code": "AQ",
+        "Country Name": "Antarctica",
+        "Time Zone": "Antarctica/Casey",
+        "UTC Offset": "UTC +08:00"
+    },
+    {
+        "Country Code": "AQ",
+        "Country Name": "Antarctica",
+        "Time Zone": "Antarctica/Davis",
+        "UTC Offset": "UTC +07:00"
+    },
+    {
+        "Country Code": "AQ",
+        "Country Name": "Antarctica",
+        "Time Zone": "Antarctica/DumontDUrville",
+        "UTC Offset": "UTC +10:00"
+    },
+    {
+        "Country Code": "AQ",
+        "Country Name": "Antarctica",
+        "Time Zone": "Antarctica/Mawson",
+        "UTC Offset": "UTC +05:00"
+    },
+    {
+        "Country Code": "AQ",
+        "Country Name": "Antarctica",
+        "Time Zone": "Antarctica/McMurdo",
+        "UTC Offset": "UTC +13:00"
+    },
+    {
+        "Country Code": "AQ",
+        "Country Name": "Antarctica",
+        "Time Zone": "Antarctica/Palmer",
+        "UTC Offset": "UTC -03:00"
+    },
+    {
+        "Country Code": "AQ",
+        "Country Name": "Antarctica",
+        "Time Zone": "Antarctica/Rothera",
+        "UTC Offset": "UTC -03:00"
+    },
+    {
+        "Country Code": "AQ",
+        "Country Name": "Antarctica",
+        "Time Zone": "Antarctica/Syowa",
+        "UTC Offset": "UTC +03:00"
+    },
+    {
+        "Country Code": "AQ",
+        "Country Name": "Antarctica",
+        "Time Zone": "Antarctica/Troll",
+        "UTC Offset": "UTC"
+    },
+    {
+        "Country Code": "AQ",
+        "Country Name": "Antarctica",
+        "Time Zone": "Antarctica/Vostok",
+        "UTC Offset": "UTC +05:00"
+    },
+    {
+        "Country Code": "AG",
+        "Country Name": "Antigua and Barbuda",
+        "Time Zone": "America/Antigua",
+        "UTC Offset": "UTC -04:00"
+    },
+    {
+        "Country Code": "AR",
+        "Country Name": "Argentina",
+        "Time Zone": "America/Argentina/Buenos_Aires",
+        "UTC Offset": "UTC -03:00"
+    },
+    {
+        "Country Code": "AR",
+        "Country Name": "Argentina",
+        "Time Zone": "America/Argentina/Catamarca",
+        "UTC Offset": "UTC -03:00"
+    },
+    {
+        "Country Code": "AR",
+        "Country Name": "Argentina",
+        "Time Zone": "America/Argentina/Cordoba",
+        "UTC Offset": "UTC -03:00"
+    },
+    {
+        "Country Code": "AR",
+        "Country Name": "Argentina",
+        "Time Zone": "America/Argentina/Jujuy",
+        "UTC Offset": "UTC -03:00"
+    },
+    {
+        "Country Code": "AR",
+        "Country Name": "Argentina",
+        "Time Zone": "America/Argentina/La_Rioja",
+        "UTC Offset": "UTC -03:00"
+    },
+    {
+        "Country Code": "AR",
+        "Country Name": "Argentina",
+        "Time Zone": "America/Argentina/Mendoza",
+        "UTC Offset": "UTC -03:00"
+    },
+    {
+        "Country Code": "AR",
+        "Country Name": "Argentina",
+        "Time Zone": "America/Argentina/Rio_Gallegos",
+        "UTC Offset": "UTC -03:00"
+    },
+    {
+        "Country Code": "AR",
+        "Country Name": "Argentina",
+        "Time Zone": "America/Argentina/Salta",
+        "UTC Offset": "UTC -03:00"
+    },
+    {
+        "Country Code": "AR",
+        "Country Name": "Argentina",
+        "Time Zone": "America/Argentina/San_Juan",
+        "UTC Offset": "UTC -03:00"
+    },
+    {
+        "Country Code": "AR",
+        "Country Name": "Argentina",
+        "Time Zone": "America/Argentina/San_Luis",
+        "UTC Offset": "UTC -03:00"
+    },
+    {
+        "Country Code": "AR",
+        "Country Name": "Argentina",
+        "Time Zone": "America/Argentina/Tucuman",
+        "UTC Offset": "UTC -03:00"
+    },
+    {
+        "Country Code": "AR",
+        "Country Name": "Argentina",
+        "Time Zone": "America/Argentina/Ushuaia",
+        "UTC Offset": "UTC -03:00"
+    },
+    {
+        "Country Code": "AM",
+        "Country Name": "Armenia",
+        "Time Zone": "Asia/Yerevan",
+        "UTC Offset": "UTC +04:00"
+    },
+    {
+        "Country Code": "AW",
+        "Country Name": "Aruba",
+        "Time Zone": "America/Aruba",
+        "UTC Offset": "UTC -04:00"
+    },
+    {
+        "Country Code": "AU",
+        "Country Name": "Australia",
+        "Time Zone": "Antarctica/Macquarie",
+        "UTC Offset": "UTC +11:00"
+    },
+    {
+        "Country Code": "AU",
+        "Country Name": "Australia",
+        "Time Zone": "Australia/Adelaide",
+        "UTC Offset": "UTC +10:30"
+    },
+    {
+        "Country Code": "AU",
+        "Country Name": "Australia",
+        "Time Zone": "Australia/Brisbane",
+        "UTC Offset": "UTC +10:00"
+    },
+    {
+        "Country Code": "AU",
+        "Country Name": "Australia",
+        "Time Zone": "Australia/Broken_Hill",
+        "UTC Offset": "UTC +10:30"
+    },
+    {
+        "Country Code": "AU",
+        "Country Name": "Australia",
+        "Time Zone": "Australia/Darwin",
+        "UTC Offset": "UTC +09:30"
+    },
+    {
+        "Country Code": "AU",
+        "Country Name": "Australia",
+        "Time Zone": "Australia/Eucla",
+        "UTC Offset": "UTC +08:45"
+    },
+    {
+        "Country Code": "AU",
+        "Country Name": "Australia",
+        "Time Zone": "Australia/Hobart",
+        "UTC Offset": "UTC +11:00"
+    },
+    {
+        "Country Code": "AU",
+        "Country Name": "Australia",
+        "Time Zone": "Australia/Lindeman",
+        "UTC Offset": "UTC +10:00"
+    },
+    {
+        "Country Code": "AU",
+        "Country Name": "Australia",
+        "Time Zone": "Australia/Lord_Howe",
+        "UTC Offset": "UTC +11:00"
+    },
+    {
+        "Country Code": "AU",
+        "Country Name": "Australia",
+        "Time Zone": "Australia/Melbourne",
+        "UTC Offset": "UTC +11:00"
+    },
+    {
+        "Country Code": "AU",
+        "Country Name": "Australia",
+        "Time Zone": "Australia/Perth",
+        "UTC Offset": "UTC +08:00"
+    },
+    {
+        "Country Code": "AU",
+        "Country Name": "Australia",
+        "Time Zone": "Australia/Sydney",
+        "UTC Offset": "UTC +11:00"
+    },
+    {
+        "Country Code": "AT",
+        "Country Name": "Austria",
+        "Time Zone": "Europe/Vienna",
+        "UTC Offset": "UTC +01:00"
+    },
+    {
+        "Country Code": "AZ",
+        "Country Name": "Azerbaijan",
+        "Time Zone": "Asia/Baku",
+        "UTC Offset": "UTC +04:00"
+    },
+    {
+        "Country Code": "BS",
+        "Country Name": "Bahamas",
+        "Time Zone": "America/Nassau",
+        "UTC Offset": "UTC -04:00"
+    },
+    {
+        "Country Code": "BH",
+        "Country Name": "Bahrain",
+        "Time Zone": "Asia/Bahrain",
+        "UTC Offset": "UTC +03:00"
+    },
+    {
+        "Country Code": "BD",
+        "Country Name": "Bangladesh",
+        "Time Zone": "Asia/Dhaka",
+        "UTC Offset": "UTC +06:00"
+    },
+    {
+        "Country Code": "BB",
+        "Country Name": "Barbados",
+        "Time Zone": "America/Barbados",
+        "UTC Offset": "UTC -04:00"
+    },
+    {
+        "Country Code": "BY",
+        "Country Name": "Belarus",
+        "Time Zone": "Europe/Minsk",
+        "UTC Offset": "UTC +03:00"
+    },
+    {
+        "Country Code": "BE",
+        "Country Name": "Belgium",
+        "Time Zone": "Europe/Brussels",
+        "UTC Offset": "UTC +01:00"
+    },
+    {
+        "Country Code": "BZ",
+        "Country Name": "Belize",
+        "Time Zone": "America/Belize",
+        "UTC Offset": "UTC -06:00"
+    },
+    {
+        "Country Code": "BJ",
+        "Country Name": "Benin",
+        "Time Zone": "Africa/Porto-Novo",
+        "UTC Offset": "UTC +01:00"
+    },
+    {
+        "Country Code": "BM",
+        "Country Name": "Bermuda",
+        "Time Zone": "Atlantic/Bermuda",
+        "UTC Offset": "UTC -03:00"
+    },
+    {
+        "Country Code": "BT",
+        "Country Name": "Bhutan",
+        "Time Zone": "Asia/Thimphu",
+        "UTC Offset": "UTC +06:00"
+    },
+    {
+        "Country Code": "BO",
+        "Country Name": "Bolivia, Plurinational State of",
+        "Time Zone": "America/La_Paz",
+        "UTC Offset": "UTC -04:00"
+    },
+    {
+        "Country Code": "BQ",
+        "Country Name": "Bonaire, Sint Eustatius and Saba",
+        "Time Zone": "America/Kralendijk",
+        "UTC Offset": "UTC -04:00"
+    },
+    {
+        "Country Code": "BA",
+        "Country Name": "Bosnia and Herzegovina",
+        "Time Zone": "Europe/Sarajevo",
+        "UTC Offset": "UTC +01:00"
+    },
+    {
+        "Country Code": "BW",
+        "Country Name": "Botswana",
+        "Time Zone": "Africa/Gaborone",
+        "UTC Offset": "UTC +02:00"
+    },
+    {
+        "Country Code": "BR",
+        "Country Name": "Brazil",
+        "Time Zone": "America/Araguaina",
+        "UTC Offset": "UTC -03:00"
+    },
+    {
+        "Country Code": "BR",
+        "Country Name": "Brazil",
+        "Time Zone": "America/Bahia",
+        "UTC Offset": "UTC -03:00"
+    },
+    {
+        "Country Code": "BR",
+        "Country Name": "Brazil",
+        "Time Zone": "America/Belem",
+        "UTC Offset": "UTC -03:00"
+    },
+    {
+        "Country Code": "BR",
+        "Country Name": "Brazil",
+        "Time Zone": "America/Boa_Vista",
+        "UTC Offset": "UTC -04:00"
+    },
+    {
+        "Country Code": "BR",
+        "Country Name": "Brazil",
+        "Time Zone": "America/Campo_Grande",
+        "UTC Offset": "UTC -04:00"
+    },
+    {
+        "Country Code": "BR",
+        "Country Name": "Brazil",
+        "Time Zone": "America/Cuiaba",
+        "UTC Offset": "UTC -04:00"
+    },
+    {
+        "Country Code": "BR",
+        "Country Name": "Brazil",
+        "Time Zone": "America/Eirunepe",
+        "UTC Offset": "UTC -05:00"
+    },
+    {
+        "Country Code": "BR",
+        "Country Name": "Brazil",
+        "Time Zone": "America/Fortaleza",
+        "UTC Offset": "UTC -03:00"
+    },
+    {
+        "Country Code": "BR",
+        "Country Name": "Brazil",
+        "Time Zone": "America/Maceio",
+        "UTC Offset": "UTC -03:00"
+    },
+    {
+        "Country Code": "BR",
+        "Country Name": "Brazil",
+        "Time Zone": "America/Manaus",
+        "UTC Offset": "UTC -04:00"
+    },
+    {
+        "Country Code": "BR",
+        "Country Name": "Brazil",
+        "Time Zone": "America/Noronha",
+        "UTC Offset": "UTC -02:00"
+    },
+    {
+        "Country Code": "BR",
+        "Country Name": "Brazil",
+        "Time Zone": "America/Porto_Velho",
+        "UTC Offset": "UTC -04:00"
+    },
+    {
+        "Country Code": "BR",
+        "Country Name": "Brazil",
+        "Time Zone": "America/Recife",
+        "UTC Offset": "UTC -03:00"
+    },
+    {
+        "Country Code": "BR",
+        "Country Name": "Brazil",
+        "Time Zone": "America/Rio_Branco",
+        "UTC Offset": "UTC -05:00"
+    },
+    {
+        "Country Code": "BR",
+        "Country Name": "Brazil",
+        "Time Zone": "America/Santarem",
+        "UTC Offset": "UTC -03:00"
+    },
+    {
+        "Country Code": "BR",
+        "Country Name": "Brazil",
+        "Time Zone": "America/Sao_Paulo",
+        "UTC Offset": "UTC -03:00"
+    },
+    {
+        "Country Code": "IO",
+        "Country Name": "British Indian Ocean Territory",
+        "Time Zone": "Indian/Chagos",
+        "UTC Offset": "UTC +06:00"
+    },
+    {
+        "Country Code": "BN",
+        "Country Name": "Brunei Darussalam",
+        "Time Zone": "Asia/Brunei",
+        "UTC Offset": "UTC +08:00"
+    },
+    {
+        "Country Code": "BG",
+        "Country Name": "Bulgaria",
+        "Time Zone": "Europe/Sofia",
+        "UTC Offset": "UTC +02:00"
+    },
+    {
+        "Country Code": "BF",
+        "Country Name": "Burkina Faso",
+        "Time Zone": "Africa/Ouagadougou",
+        "UTC Offset": "UTC"
+    },
+    {
+        "Country Code": "BI",
+        "Country Name": "Burundi",
+        "Time Zone": "Africa/Bujumbura",
+        "UTC Offset": "UTC +02:00"
+    },
+    {
+        "Country Code": "KH",
+        "Country Name": "Cambodia",
+        "Time Zone": "Asia/Phnom_Penh",
+        "UTC Offset": "UTC +07:00"
+    },
+    {
+        "Country Code": "CM",
+        "Country Name": "Cameroon",
+        "Time Zone": "Africa/Douala",
+        "UTC Offset": "UTC +01:00"
+    },
+    {
+        "Country Code": "CA",
+        "Country Name": "Canada",
+        "Time Zone": "America/Atikokan",
+        "UTC Offset": "UTC -05:00"
+    },
+    {
+        "Country Code": "CA",
+        "Country Name": "Canada",
+        "Time Zone": "America/Blanc-Sablon",
+        "UTC Offset": "UTC -04:00"
+    },
+    {
+        "Country Code": "CA",
+        "Country Name": "Canada",
+        "Time Zone": "America/Cambridge_Bay",
+        "UTC Offset": "UTC -06:00"
+    },
+    {
+        "Country Code": "CA",
+        "Country Name": "Canada",
+        "Time Zone": "America/Creston",
+        "UTC Offset": "UTC -07:00"
+    },
+    {
+        "Country Code": "CA",
+        "Country Name": "Canada",
+        "Time Zone": "America/Dawson",
+        "UTC Offset": "UTC -07:00"
+    },
+    {
+        "Country Code": "CA",
+        "Country Name": "Canada",
+        "Time Zone": "America/Dawson_Creek",
+        "UTC Offset": "UTC -07:00"
+    },
+    {
+        "Country Code": "CA",
+        "Country Name": "Canada",
+        "Time Zone": "America/Edmonton",
+        "UTC Offset": "UTC -06:00"
+    },
+    {
+        "Country Code": "CA",
+        "Country Name": "Canada",
+        "Time Zone": "America/Fort_Nelson",
+        "UTC Offset": "UTC -07:00"
+    },
+    {
+        "Country Code": "CA",
+        "Country Name": "Canada",
+        "Time Zone": "America/Glace_Bay",
+        "UTC Offset": "UTC -03:00"
+    },
+    {
+        "Country Code": "CA",
+        "Country Name": "Canada",
+        "Time Zone": "America/Goose_Bay",
+        "UTC Offset": "UTC -03:00"
+    },
+    {
+        "Country Code": "CA",
+        "Country Name": "Canada",
+        "Time Zone": "America/Halifax",
+        "UTC Offset": "UTC -03:00"
+    },
+    {
+        "Country Code": "CA",
+        "Country Name": "Canada",
+        "Time Zone": "America/Inuvik",
+        "UTC Offset": "UTC -06:00"
+    },
+    {
+        "Country Code": "CA",
+        "Country Name": "Canada",
+        "Time Zone": "America/Iqaluit",
+        "UTC Offset": "UTC -04:00"
+    },
+    {
+        "Country Code": "CA",
+        "Country Name": "Canada",
+        "Time Zone": "America/Moncton",
+        "UTC Offset": "UTC -03:00"
+    },
+    {
+        "Country Code": "CA",
+        "Country Name": "Canada",
+        "Time Zone": "America/Rankin_Inlet",
+        "UTC Offset": "UTC -05:00"
+    },
+    {
+        "Country Code": "CA",
+        "Country Name": "Canada",
+        "Time Zone": "America/Regina",
+        "UTC Offset": "UTC -06:00"
+    },
+    {
+        "Country Code": "CA",
+        "Country Name": "Canada",
+        "Time Zone": "America/Resolute",
+        "UTC Offset": "UTC -05:00"
+    },
+    {
+        "Country Code": "CA",
+        "Country Name": "Canada",
+        "Time Zone": "America/St_Johns",
+        "UTC Offset": "UTC -02:30"
+    },
+    {
+        "Country Code": "CA",
+        "Country Name": "Canada",
+        "Time Zone": "America/Swift_Current",
+        "UTC Offset": "UTC -06:00"
+    },
+    {
+        "Country Code": "CA",
+        "Country Name": "Canada",
+        "Time Zone": "America/Toronto",
+        "UTC Offset": "UTC -04:00"
+    },
+    {
+        "Country Code": "CA",
+        "Country Name": "Canada",
+        "Time Zone": "America/Vancouver",
+        "UTC Offset": "UTC -07:00"
+    },
+    {
+        "Country Code": "CA",
+        "Country Name": "Canada",
+        "Time Zone": "America/Whitehorse",
+        "UTC Offset": "UTC -07:00"
+    },
+    {
+        "Country Code": "CA",
+        "Country Name": "Canada",
+        "Time Zone": "America/Winnipeg",
+        "UTC Offset": "UTC -05:00"
+    },
+    {
+        "Country Code": "CV",
+        "Country Name": "Cape Verde",
+        "Time Zone": "Atlantic/Cape_Verde",
+        "UTC Offset": "UTC -01:00"
+    },
+    {
+        "Country Code": "KY",
+        "Country Name": "Cayman Islands",
+        "Time Zone": "America/Cayman",
+        "UTC Offset": "UTC -05:00"
+    },
+    {
+        "Country Code": "CF",
+        "Country Name": "Central African Republic",
+        "Time Zone": "Africa/Bangui",
+        "UTC Offset": "UTC +01:00"
+    },
+    {
+        "Country Code": "TD",
+        "Country Name": "Chad",
+        "Time Zone": "Africa/Ndjamena",
+        "UTC Offset": "UTC +01:00"
+    },
+    {
+        "Country Code": "CL",
+        "Country Name": "Chile",
+        "Time Zone": "America/Punta_Arenas",
+        "UTC Offset": "UTC -03:00"
+    },
+    {
+        "Country Code": "CL",
+        "Country Name": "Chile",
+        "Time Zone": "America/Santiago",
+        "UTC Offset": "UTC -03:00"
+    },
+    {
+        "Country Code": "CL",
+        "Country Name": "Chile",
+        "Time Zone": "Pacific/Easter",
+        "UTC Offset": "UTC -05:00"
+    },
+    {
+        "Country Code": "CN",
+        "Country Name": "China",
+        "Time Zone": "Asia/Shanghai",
+        "UTC Offset": "UTC +08:00"
+    },
+    {
+        "Country Code": "CN",
+        "Country Name": "China",
+        "Time Zone": "Asia/Urumqi",
+        "UTC Offset": "UTC +06:00"
+    },
+    {
+        "Country Code": "CX",
+        "Country Name": "Christmas Island",
+        "Time Zone": "Indian/Christmas",
+        "UTC Offset": "UTC +07:00"
+    },
+    {
+        "Country Code": "CC",
+        "Country Name": "Cocos (Keeling) Islands",
+        "Time Zone": "Indian/Cocos",
+        "UTC Offset": "UTC +06:30"
+    },
+    {
+        "Country Code": "CO",
+        "Country Name": "Colombia",
+        "Time Zone": "America/Bogota",
+        "UTC Offset": "UTC -05:00"
+    },
+    {
+        "Country Code": "KM",
+        "Country Name": "Comoros",
+        "Time Zone": "Indian/Comoro",
+        "UTC Offset": "UTC +03:00"
+    },
+    {
+        "Country Code": "CG",
+        "Country Name": "Congo",
+        "Time Zone": "Africa/Brazzaville",
+        "UTC Offset": "UTC +01:00"
+    },
+    {
+        "Country Code": "CD",
+        "Country Name": "Congo, the Democratic Republic of the",
+        "Time Zone": "Africa/Kinshasa",
+        "UTC Offset": "UTC +01:00"
+    },
+    {
+        "Country Code": "CD",
+        "Country Name": "Congo, the Democratic Republic of the",
+        "Time Zone": "Africa/Lubumbashi",
+        "UTC Offset": "UTC +02:00"
+    },
+    {
+        "Country Code": "CK",
+        "Country Name": "Cook Islands",
+        "Time Zone": "Pacific/Rarotonga",
+        "UTC Offset": "UTC -10:00"
+    },
+    {
+        "Country Code": "CR",
+        "Country Name": "Costa Rica",
+        "Time Zone": "America/Costa_Rica",
+        "UTC Offset": "UTC -06:00"
+    },
+    {
+        "Country Code": "HR",
+        "Country Name": "Croatia",
+        "Time Zone": "Europe/Zagreb",
+        "UTC Offset": "UTC +01:00"
+    },
+    {
+        "Country Code": "CU",
+        "Country Name": "Cuba",
+        "Time Zone": "America/Havana",
+        "UTC Offset": "UTC -04:00"
+    },
+    {
+        "Country Code": "CW",
+        "Country Name": "Curacao",
+        "Time Zone": "America/Curacao",
+        "UTC Offset": "UTC -04:00"
+    },
+    {
+        "Country Code": "CY",
+        "Country Name": "Cyprus",
+        "Time Zone": "Asia/Famagusta",
+        "UTC Offset": "UTC +02:00"
+    },
+    {
+        "Country Code": "CY",
+        "Country Name": "Cyprus",
+        "Time Zone": "Asia/Nicosia",
+        "UTC Offset": "UTC +02:00"
+    },
+    {
+        "Country Code": "CZ",
+        "Country Name": "Czech Republic",
+        "Time Zone": "Europe/Prague",
+        "UTC Offset": "UTC +01:00"
+    },
+    {
+        "Country Code": "CI",
+        "Country Name": "C\u00f4te d'Ivoire",
+        "Time Zone": "Africa/Abidjan",
+        "UTC Offset": "UTC"
+    },
+    {
+        "Country Code": "DK",
+        "Country Name": "Denmark",
+        "Time Zone": "Europe/Copenhagen",
+        "UTC Offset": "UTC +01:00"
+    },
+    {
+        "Country Code": "DJ",
+        "Country Name": "Djibouti",
+        "Time Zone": "Africa/Djibouti",
+        "UTC Offset": "UTC +03:00"
+    },
+    {
+        "Country Code": "DM",
+        "Country Name": "Dominica",
+        "Time Zone": "America/Dominica",
+        "UTC Offset": "UTC -04:00"
+    },
+    {
+        "Country Code": "DO",
+        "Country Name": "Dominican Republic",
+        "Time Zone": "America/Santo_Domingo",
+        "UTC Offset": "UTC -04:00"
+    },
+    {
+        "Country Code": "EC",
+        "Country Name": "Ecuador",
+        "Time Zone": "America/Guayaquil",
+        "UTC Offset": "UTC -05:00"
+    },
+    {
+        "Country Code": "EC",
+        "Country Name": "Ecuador",
+        "Time Zone": "Pacific/Galapagos",
+        "UTC Offset": "UTC -06:00"
+    },
+    {
+        "Country Code": "EG",
+        "Country Name": "Egypt",
+        "Time Zone": "Africa/Cairo",
+        "UTC Offset": "UTC +02:00"
+    },
+    {
+        "Country Code": "SV",
+        "Country Name": "El Salvador",
+        "Time Zone": "America/El_Salvador",
+        "UTC Offset": "UTC -06:00"
+    },
+    {
+        "Country Code": "GQ",
+        "Country Name": "Equatorial Guinea",
+        "Time Zone": "Africa/Malabo",
+        "UTC Offset": "UTC +01:00"
+    },
+    {
+        "Country Code": "ER",
+        "Country Name": "Eritrea",
+        "Time Zone": "Africa/Asmara",
+        "UTC Offset": "UTC +03:00"
+    },
+    {
+        "Country Code": "EE",
+        "Country Name": "Estonia",
+        "Time Zone": "Europe/Tallinn",
+        "UTC Offset": "UTC +02:00"
+    },
+    {
+        "Country Code": "ET",
+        "Country Name": "Ethiopia",
+        "Time Zone": "Africa/Addis_Ababa",
+        "UTC Offset": "UTC +03:00"
+    },
+    {
+        "Country Code": "FK",
+        "Country Name": "Falkland Islands (Malvinas)",
+        "Time Zone": "Atlantic/Stanley",
+        "UTC Offset": "UTC -03:00"
+    },
+    {
+        "Country Code": "FO",
+        "Country Name": "Faroe Islands",
+        "Time Zone": "Atlantic/Faroe",
+        "UTC Offset": "UTC"
+    },
+    {
+        "Country Code": "FJ",
+        "Country Name": "Fiji",
+        "Time Zone": "Pacific/Fiji",
+        "UTC Offset": "UTC +12:00"
+    },
+    {
+        "Country Code": "FI",
+        "Country Name": "Finland",
+        "Time Zone": "Europe/Helsinki",
+        "UTC Offset": "UTC +02:00"
+    },
+    {
+        "Country Code": "FR",
+        "Country Name": "France",
+        "Time Zone": "Europe/Paris",
+        "UTC Offset": "UTC +01:00"
+    },
+    {
+        "Country Code": "GF",
+        "Country Name": "French Guiana",
+        "Time Zone": "America/Cayenne",
+        "UTC Offset": "UTC -03:00"
+    },
+    {
+        "Country Code": "PF",
+        "Country Name": "French Polynesia",
+        "Time Zone": "Pacific/Gambier",
+        "UTC Offset": "UTC -09:00"
+    },
+    {
+        "Country Code": "PF",
+        "Country Name": "French Polynesia",
+        "Time Zone": "Pacific/Marquesas",
+        "UTC Offset": "UTC -09:30"
+    },
+    {
+        "Country Code": "PF",
+        "Country Name": "French Polynesia",
+        "Time Zone": "Pacific/Tahiti",
+        "UTC Offset": "UTC -10:00"
+    },
+    {
+        "Country Code": "TF",
+        "Country Name": "French Southern Territories",
+        "Time Zone": "Indian/Kerguelen",
+        "UTC Offset": "UTC +05:00"
+    },
+    {
+        "Country Code": "GA",
+        "Country Name": "Gabon",
+        "Time Zone": "Africa/Libreville",
+        "UTC Offset": "UTC +01:00"
+    },
+    {
+        "Country Code": "GM",
+        "Country Name": "Gambia",
+        "Time Zone": "Africa/Banjul",
+        "UTC Offset": "UTC"
+    },
+    {
+        "Country Code": "GE",
+        "Country Name": "Georgia",
+        "Time Zone": "Asia/Tbilisi",
+        "UTC Offset": "UTC +04:00"
+    },
+    {
+        "Country Code": "DE",
+        "Country Name": "Germany",
+        "Time Zone": "Europe/Berlin",
+        "UTC Offset": "UTC +01:00"
+    },
+    {
+        "Country Code": "DE",
+        "Country Name": "Germany",
+        "Time Zone": "Europe/Busingen",
+        "UTC Offset": "UTC +01:00"
+    },
+    {
+        "Country Code": "GH",
+        "Country Name": "Ghana",
+        "Time Zone": "Africa/Accra",
+        "UTC Offset": "UTC"
+    },
+    {
+        "Country Code": "GI",
+        "Country Name": "Gibraltar",
+        "Time Zone": "Europe/Gibraltar",
+        "UTC Offset": "UTC +01:00"
+    },
+    {
+        "Country Code": "GR",
+        "Country Name": "Greece",
+        "Time Zone": "Europe/Athens",
+        "UTC Offset": "UTC +02:00"
+    },
+    {
+        "Country Code": "GL",
+        "Country Name": "Greenland",
+        "Time Zone": "America/Danmarkshavn",
+        "UTC Offset": "UTC"
+    },
+    {
+        "Country Code": "GL",
+        "Country Name": "Greenland",
+        "Time Zone": "America/Nuuk",
+        "UTC Offset": "UTC -02:00"
+    },
+    {
+        "Country Code": "GL",
+        "Country Name": "Greenland",
+        "Time Zone": "America/Scoresbysund",
+        "UTC Offset": "UTC -01:00"
+    },
+    {
+        "Country Code": "GL",
+        "Country Name": "Greenland",
+        "Time Zone": "America/Thule",
+        "UTC Offset": "UTC -03:00"
+    },
+    {
+        "Country Code": "GD",
+        "Country Name": "Grenada",
+        "Time Zone": "America/Grenada",
+        "UTC Offset": "UTC -04:00"
+    },
+    {
+        "Country Code": "GP",
+        "Country Name": "Guadeloupe",
+        "Time Zone": "America/Guadeloupe",
+        "UTC Offset": "UTC -04:00"
+    },
+    {
+        "Country Code": "GU",
+        "Country Name": "Guam",
+        "Time Zone": "Pacific/Guam",
+        "UTC Offset": "UTC +10:00"
+    },
+    {
+        "Country Code": "GT",
+        "Country Name": "Guatemala",
+        "Time Zone": "America/Guatemala",
+        "UTC Offset": "UTC -06:00"
+    },
+    {
+        "Country Code": "GG",
+        "Country Name": "Guernsey",
+        "Time Zone": "Europe/Guernsey",
+        "UTC Offset": "UTC"
+    },
+    {
+        "Country Code": "GN",
+        "Country Name": "Guinea",
+        "Time Zone": "Africa/Conakry",
+        "UTC Offset": "UTC"
+    },
+    {
+        "Country Code": "GW",
+        "Country Name": "Guinea-Bissau",
+        "Time Zone": "Africa/Bissau",
+        "UTC Offset": "UTC"
+    },
+    {
+        "Country Code": "GY",
+        "Country Name": "Guyana",
+        "Time Zone": "America/Guyana",
+        "UTC Offset": "UTC -04:00"
+    },
+    {
+        "Country Code": "HT",
+        "Country Name": "Haiti",
+        "Time Zone": "America/Port-au-Prince",
+        "UTC Offset": "UTC -04:00"
+    },
+    {
+        "Country Code": "VA",
+        "Country Name": "Holy See (Vatican City State)",
+        "Time Zone": "Europe/Vatican",
+        "UTC Offset": "UTC +01:00"
+    },
+    {
+        "Country Code": "HN",
+        "Country Name": "Honduras",
+        "Time Zone": "America/Tegucigalpa",
+        "UTC Offset": "UTC -06:00"
+    },
+    {
+        "Country Code": "HK",
+        "Country Name": "Hong Kong",
+        "Time Zone": "Asia/Hong_Kong",
+        "UTC Offset": "UTC +08:00"
+    },
+    {
+        "Country Code": "HU",
+        "Country Name": "Hungary",
+        "Time Zone": "Europe/Budapest",
+        "UTC Offset": "UTC +01:00"
+    },
+    {
+        "Country Code": "IS",
+        "Country Name": "Iceland",
+        "Time Zone": "Atlantic/Reykjavik",
+        "UTC Offset": "UTC"
+    },
+    {
+        "Country Code": "IN",
+        "Country Name": "India",
+        "Time Zone": "Asia/Kolkata",
+        "UTC Offset": "UTC +05:30"
+    },
+    {
+        "Country Code": "ID",
+        "Country Name": "Indonesia",
+        "Time Zone": "Asia/Jakarta",
+        "UTC Offset": "UTC +07:00"
+    },
+    {
+        "Country Code": "ID",
+        "Country Name": "Indonesia",
+        "Time Zone": "Asia/Jayapura",
+        "UTC Offset": "UTC +09:00"
+    },
+    {
+        "Country Code": "ID",
+        "Country Name": "Indonesia",
+        "Time Zone": "Asia/Makassar",
+        "UTC Offset": "UTC +08:00"
+    },
+    {
+        "Country Code": "ID",
+        "Country Name": "Indonesia",
+        "Time Zone": "Asia/Pontianak",
+        "UTC Offset": "UTC +07:00"
+    },
+    {
+        "Country Code": "IR",
+        "Country Name": "Iran, Islamic Republic of",
+        "Time Zone": "Asia/Tehran",
+        "UTC Offset": "UTC +03:30"
+    },
+    {
+        "Country Code": "IQ",
+        "Country Name": "Iraq",
+        "Time Zone": "Asia/Baghdad",
+        "UTC Offset": "UTC +03:00"
+    },
+    {
+        "Country Code": "IE",
+        "Country Name": "Ireland",
+        "Time Zone": "Europe/Dublin",
+        "UTC Offset": "UTC"
+    },
+    {
+        "Country Code": "IM",
+        "Country Name": "Isle of Man",
+        "Time Zone": "Europe/Isle_of_Man",
+        "UTC Offset": "UTC"
+    },
+    {
+        "Country Code": "IL",
+        "Country Name": "Israel",
+        "Time Zone": "Asia/Jerusalem",
+        "UTC Offset": "UTC +02:00"
+    },
+    {
+        "Country Code": "IT",
+        "Country Name": "Italy",
+        "Time Zone": "Europe/Rome",
+        "UTC Offset": "UTC +01:00"
+    },
+    {
+        "Country Code": "JM",
+        "Country Name": "Jamaica",
+        "Time Zone": "America/Jamaica",
+        "UTC Offset": "UTC -05:00"
+    },
+    {
+        "Country Code": "JP",
+        "Country Name": "Japan",
+        "Time Zone": "Asia/Tokyo",
+        "UTC Offset": "UTC +09:00"
+    },
+    {
+        "Country Code": "JE",
+        "Country Name": "Jersey",
+        "Time Zone": "Europe/Jersey",
+        "UTC Offset": "UTC"
+    },
+    {
+        "Country Code": "JO",
+        "Country Name": "Jordan",
+        "Time Zone": "Asia/Amman",
+        "UTC Offset": "UTC +03:00"
+    },
+    {
+        "Country Code": "KZ",
+        "Country Name": "Kazakhstan",
+        "Time Zone": "Asia/Almaty",
+        "UTC Offset": "UTC +05:00"
+    },
+    {
+        "Country Code": "KZ",
+        "Country Name": "Kazakhstan",
+        "Time Zone": "Asia/Aqtau",
+        "UTC Offset": "UTC +05:00"
+    },
+    {
+        "Country Code": "KZ",
+        "Country Name": "Kazakhstan",
+        "Time Zone": "Asia/Aqtobe",
+        "UTC Offset": "UTC +05:00"
+    },
+    {
+        "Country Code": "KZ",
+        "Country Name": "Kazakhstan",
+        "Time Zone": "Asia/Atyrau",
+        "UTC Offset": "UTC +05:00"
+    },
+    {
+        "Country Code": "KZ",
+        "Country Name": "Kazakhstan",
+        "Time Zone": "Asia/Oral",
+        "UTC Offset": "UTC +05:00"
+    },
+    {
+        "Country Code": "KZ",
+        "Country Name": "Kazakhstan",
+        "Time Zone": "Asia/Qostanay",
+        "UTC Offset": "UTC +05:00"
+    },
+    {
+        "Country Code": "KZ",
+        "Country Name": "Kazakhstan",
+        "Time Zone": "Asia/Qyzylorda",
+        "UTC Offset": "UTC +05:00"
+    },
+    {
+        "Country Code": "KE",
+        "Country Name": "Kenya",
+        "Time Zone": "Africa/Nairobi",
+        "UTC Offset": "UTC +03:00"
+    },
+    {
+        "Country Code": "KI",
+        "Country Name": "Kiribati",
+        "Time Zone": "Pacific/Kanton",
+        "UTC Offset": "UTC +13:00"
+    },
+    {
+        "Country Code": "KI",
+        "Country Name": "Kiribati",
+        "Time Zone": "Pacific/Kiritimati",
+        "UTC Offset": "UTC +14:00"
+    },
+    {
+        "Country Code": "KI",
+        "Country Name": "Kiribati",
+        "Time Zone": "Pacific/Tarawa",
+        "UTC Offset": "UTC +12:00"
+    },
+    {
+        "Country Code": "KP",
+        "Country Name": "Korea, Democratic People's Republic of",
+        "Time Zone": "Asia/Pyongyang",
+        "UTC Offset": "UTC +09:00"
+    },
+    {
+        "Country Code": "KR",
+        "Country Name": "Korea, Republic of",
+        "Time Zone": "Asia/Seoul",
+        "UTC Offset": "UTC +09:00"
+    },
+    {
+        "Country Code": "KW",
+        "Country Name": "Kuwait",
+        "Time Zone": "Asia/Kuwait",
+        "UTC Offset": "UTC +03:00"
+    },
+    {
+        "Country Code": "KG",
+        "Country Name": "Kyrgyzstan",
+        "Time Zone": "Asia/Bishkek",
+        "UTC Offset": "UTC +06:00"
+    },
+    {
+        "Country Code": "LA",
+        "Country Name": "Lao People's Democratic Republic",
+        "Time Zone": "Asia/Vientiane",
+        "UTC Offset": "UTC +07:00"
+    },
+    {
+        "Country Code": "LV",
+        "Country Name": "Latvia",
+        "Time Zone": "Europe/Riga",
+        "UTC Offset": "UTC +02:00"
+    },
+    {
+        "Country Code": "LB",
+        "Country Name": "Lebanon",
+        "Time Zone": "Asia/Beirut",
+        "UTC Offset": "UTC +02:00"
+    },
+    {
+        "Country Code": "LS",
+        "Country Name": "Lesotho",
+        "Time Zone": "Africa/Maseru",
+        "UTC Offset": "UTC +02:00"
+    },
+    {
+        "Country Code": "LR",
+        "Country Name": "Liberia",
+        "Time Zone": "Africa/Monrovia",
+        "UTC Offset": "UTC"
+    },
+    {
+        "Country Code": "LY",
+        "Country Name": "Libya",
+        "Time Zone": "Africa/Tripoli",
+        "UTC Offset": "UTC +02:00"
+    },
+    {
+        "Country Code": "LI",
+        "Country Name": "Liechtenstein",
+        "Time Zone": "Europe/Vaduz",
+        "UTC Offset": "UTC +01:00"
+    },
+    {
+        "Country Code": "LT",
+        "Country Name": "Lithuania",
+        "Time Zone": "Europe/Vilnius",
+        "UTC Offset": "UTC +02:00"
+    },
+    {
+        "Country Code": "LU",
+        "Country Name": "Luxembourg",
+        "Time Zone": "Europe/Luxembourg",
+        "UTC Offset": "UTC +01:00"
+    },
+    {
+        "Country Code": "MO",
+        "Country Name": "Macao",
+        "Time Zone": "Asia/Macau",
+        "UTC Offset": "UTC +08:00"
+    },
+    {
+        "Country Code": "MK",
+        "Country Name": "Macedonia, the Former Yugoslav Republic of",
+        "Time Zone": "Europe/Skopje",
+        "UTC Offset": "UTC +01:00"
+    },
+    {
+        "Country Code": "MG",
+        "Country Name": "Madagascar",
+        "Time Zone": "Indian/Antananarivo",
+        "UTC Offset": "UTC +03:00"
+    },
+    {
+        "Country Code": "MW",
+        "Country Name": "Malawi",
+        "Time Zone": "Africa/Blantyre",
+        "UTC Offset": "UTC +02:00"
+    },
+    {
+        "Country Code": "MY",
+        "Country Name": "Malaysia",
+        "Time Zone": "Asia/Kuala_Lumpur",
+        "UTC Offset": "UTC +08:00"
+    },
+    {
+        "Country Code": "MY",
+        "Country Name": "Malaysia",
+        "Time Zone": "Asia/Kuching",
+        "UTC Offset": "UTC +08:00"
+    },
+    {
+        "Country Code": "MV",
+        "Country Name": "Maldives",
+        "Time Zone": "Indian/Maldives",
+        "UTC Offset": "UTC +05:00"
+    },
+    {
+        "Country Code": "ML",
+        "Country Name": "Mali",
+        "Time Zone": "Africa/Bamako",
+        "UTC Offset": "UTC"
+    },
+    {
+        "Country Code": "MT",
+        "Country Name": "Malta",
+        "Time Zone": "Europe/Malta",
+        "UTC Offset": "UTC +01:00"
+    },
+    {
+        "Country Code": "MH",
+        "Country Name": "Marshall Islands",
+        "Time Zone": "Pacific/Kwajalein",
+        "UTC Offset": "UTC +12:00"
+    },
+    {
+        "Country Code": "MH",
+        "Country Name": "Marshall Islands",
+        "Time Zone": "Pacific/Majuro",
+        "UTC Offset": "UTC +12:00"
+    },
+    {
+        "Country Code": "MQ",
+        "Country Name": "Martinique",
+        "Time Zone": "America/Martinique",
+        "UTC Offset": "UTC -04:00"
+    },
+    {
+        "Country Code": "MR",
+        "Country Name": "Mauritania",
+        "Time Zone": "Africa/Nouakchott",
+        "UTC Offset": "UTC"
+    },
+    {
+        "Country Code": "MU",
+        "Country Name": "Mauritius",
+        "Time Zone": "Indian/Mauritius",
+        "UTC Offset": "UTC +04:00"
+    },
+    {
+        "Country Code": "YT",
+        "Country Name": "Mayotte",
+        "Time Zone": "Indian/Mayotte",
+        "UTC Offset": "UTC +03:00"
+    },
+    {
+        "Country Code": "MX",
+        "Country Name": "Mexico",
+        "Time Zone": "America/Bahia_Banderas",
+        "UTC Offset": "UTC -06:00"
+    },
+    {
+        "Country Code": "MX",
+        "Country Name": "Mexico",
+        "Time Zone": "America/Cancun",
+        "UTC Offset": "UTC -05:00"
+    },
+    {
+        "Country Code": "MX",
+        "Country Name": "Mexico",
+        "Time Zone": "America/Chihuahua",
+        "UTC Offset": "UTC -06:00"
+    },
+    {
+        "Country Code": "MX",
+        "Country Name": "Mexico",
+        "Time Zone": "America/Ciudad_Juarez",
+        "UTC Offset": "UTC -06:00"
+    },
+    {
+        "Country Code": "MX",
+        "Country Name": "Mexico",
+        "Time Zone": "America/Hermosillo",
+        "UTC Offset": "UTC -07:00"
+    },
+    {
+        "Country Code": "MX",
+        "Country Name": "Mexico",
+        "Time Zone": "America/Matamoros",
+        "UTC Offset": "UTC -05:00"
+    },
+    {
+        "Country Code": "MX",
+        "Country Name": "Mexico",
+        "Time Zone": "America/Mazatlan",
+        "UTC Offset": "UTC -07:00"
+    },
+    {
+        "Country Code": "MX",
+        "Country Name": "Mexico",
+        "Time Zone": "America/Merida",
+        "UTC Offset": "UTC -06:00"
+    },
+    {
+        "Country Code": "MX",
+        "Country Name": "Mexico",
+        "Time Zone": "America/Mexico_City",
+        "UTC Offset": "UTC -06:00"
+    },
+    {
+        "Country Code": "MX",
+        "Country Name": "Mexico",
+        "Time Zone": "America/Monterrey",
+        "UTC Offset": "UTC -06:00"
+    },
+    {
+        "Country Code": "MX",
+        "Country Name": "Mexico",
+        "Time Zone": "America/Ojinaga",
+        "UTC Offset": "UTC -05:00"
+    },
+    {
+        "Country Code": "MX",
+        "Country Name": "Mexico",
+        "Time Zone": "America/Tijuana",
+        "UTC Offset": "UTC -07:00"
+    },
+    {
+        "Country Code": "FM",
+        "Country Name": "Micronesia, Federated States of",
+        "Time Zone": "Pacific/Chuuk",
+        "UTC Offset": "UTC +10:00"
+    },
+    {
+        "Country Code": "FM",
+        "Country Name": "Micronesia, Federated States of",
+        "Time Zone": "Pacific/Kosrae",
+        "UTC Offset": "UTC +11:00"
+    },
+    {
+        "Country Code": "FM",
+        "Country Name": "Micronesia, Federated States of",
+        "Time Zone": "Pacific/Pohnpei",
+        "UTC Offset": "UTC +11:00"
+    },
+    {
+        "Country Code": "MD",
+        "Country Name": "Moldova, Republic of",
+        "Time Zone": "Europe/Chisinau",
+        "UTC Offset": "UTC +02:00"
+    },
+    {
+        "Country Code": "MC",
+        "Country Name": "Monaco",
+        "Time Zone": "Europe/Monaco",
+        "UTC Offset": "UTC +01:00"
+    },
+    {
+        "Country Code": "MN",
+        "Country Name": "Mongolia",
+        "Time Zone": "Asia/Choibalsan",
+        "UTC Offset": "UTC +08:00"
+    },
+    {
+        "Country Code": "MN",
+        "Country Name": "Mongolia",
+        "Time Zone": "Asia/Hovd",
+        "UTC Offset": "UTC +07:00"
+    },
+    {
+        "Country Code": "MN",
+        "Country Name": "Mongolia",
+        "Time Zone": "Asia/Ulaanbaatar",
+        "UTC Offset": "UTC +08:00"
+    },
+    {
+        "Country Code": "ME",
+        "Country Name": "Montenegro",
+        "Time Zone": "Europe/Podgorica",
+        "UTC Offset": "UTC +01:00"
+    },
+    {
+        "Country Code": "MS",
+        "Country Name": "Montserrat",
+        "Time Zone": "America/Montserrat",
+        "UTC Offset": "UTC -04:00"
+    },
+    {
+        "Country Code": "MA",
+        "Country Name": "Morocco",
+        "Time Zone": "Africa/Casablanca",
+        "UTC Offset": "UTC"
+    },
+    {
+        "Country Code": "MA",
+        "Country Name": "Morocco",
+        "Time Zone": "Africa/El_Aaiun",
+        "UTC Offset": "UTC"
+    },
+    {
+        "Country Code": "MZ",
+        "Country Name": "Mozambique",
+        "Time Zone": "Africa/Maputo",
+        "UTC Offset": "UTC +02:00"
+    },
+    {
+        "Country Code": "MM",
+        "Country Name": "Myanmar",
+        "Time Zone": "Asia/Yangon",
+        "UTC Offset": "UTC +06:30"
+    },
+    {
+        "Country Code": "NA",
+        "Country Name": "Namibia",
+        "Time Zone": "Africa/Windhoek",
+        "UTC Offset": "UTC +02:00"
+    },
+    {
+        "Country Code": "NR",
+        "Country Name": "Nauru",
+        "Time Zone": "Pacific/Nauru",
+        "UTC Offset": "UTC +12:00"
+    },
+    {
+        "Country Code": "NP",
+        "Country Name": "Nepal",
+        "Time Zone": "Asia/Kathmandu",
+        "UTC Offset": "UTC +05:45"
+    },
+    {
+        "Country Code": "NL",
+        "Country Name": "Netherlands",
+        "Time Zone": "Europe/Amsterdam",
+        "UTC Offset": "UTC +01:00"
+    },
+    {
+        "Country Code": "NC",
+        "Country Name": "New Caledonia",
+        "Time Zone": "Pacific/Noumea",
+        "UTC Offset": "UTC +11:00"
+    },
+    {
+        "Country Code": "NZ",
+        "Country Name": "New Zealand",
+        "Time Zone": "Pacific/Auckland",
+        "UTC Offset": "UTC +13:00"
+    },
+    {
+        "Country Code": "NZ",
+        "Country Name": "New Zealand",
+        "Time Zone": "Pacific/Chatham",
+        "UTC Offset": "UTC +13:45"
+    },
+    {
+        "Country Code": "NI",
+        "Country Name": "Nicaragua",
+        "Time Zone": "America/Managua",
+        "UTC Offset": "UTC -06:00"
+    },
+    {
+        "Country Code": "NE",
+        "Country Name": "Niger",
+        "Time Zone": "Africa/Niamey",
+        "UTC Offset": "UTC +01:00"
+    },
+    {
+        "Country Code": "NG",
+        "Country Name": "Nigeria",
+        "Time Zone": "Africa/Lagos",
+        "UTC Offset": "UTC +01:00"
+    },
+    {
+        "Country Code": "NU",
+        "Country Name": "Niue",
+        "Time Zone": "Pacific/Niue",
+        "UTC Offset": "UTC -11:00"
+    },
+    {
+        "Country Code": "NF",
+        "Country Name": "Norfolk Island",
+        "Time Zone": "Pacific/Norfolk",
+        "UTC Offset": "UTC +12:00"
+    },
+    {
+        "Country Code": "MP",
+        "Country Name": "Northern Mariana Islands",
+        "Time Zone": "Pacific/Saipan",
+        "UTC Offset": "UTC +10:00"
+    },
+    {
+        "Country Code": "NO",
+        "Country Name": "Norway",
+        "Time Zone": "Europe/Oslo",
+        "UTC Offset": "UTC +01:00"
+    },
+    {
+        "Country Code": "OM",
+        "Country Name": "Oman",
+        "Time Zone": "Asia/Muscat",
+        "UTC Offset": "UTC +04:00"
+    },
+    {
+        "Country Code": "PK",
+        "Country Name": "Pakistan",
+        "Time Zone": "Asia/Karachi",
+        "UTC Offset": "UTC +05:00"
+    },
+    {
+        "Country Code": "PW",
+        "Country Name": "Palau",
+        "Time Zone": "Pacific/Palau",
+        "UTC Offset": "UTC +09:00"
+    },
+    {
+        "Country Code": "PS",
+        "Country Name": "Palestine, State of",
+        "Time Zone": "Asia/Gaza",
+        "UTC Offset": "UTC +02:00"
+    },
+    {
+        "Country Code": "PS",
+        "Country Name": "Palestine, State of",
+        "Time Zone": "Asia/Hebron",
+        "UTC Offset": "UTC +02:00"
+    },
+    {
+        "Country Code": "PA",
+        "Country Name": "Panama",
+        "Time Zone": "America/Panama",
+        "UTC Offset": "UTC -05:00"
+    },
+    {
+        "Country Code": "PG",
+        "Country Name": "Papua New Guinea",
+        "Time Zone": "Pacific/Bougainville",
+        "UTC Offset": "UTC +11:00"
+    },
+    {
+        "Country Code": "PG",
+        "Country Name": "Papua New Guinea",
+        "Time Zone": "Pacific/Port_Moresby",
+        "UTC Offset": "UTC +10:00"
+    },
+    {
+        "Country Code": "PY",
+        "Country Name": "Paraguay",
+        "Time Zone": "America/Asuncion",
+        "UTC Offset": "UTC -03:00"
+    },
+    {
+        "Country Code": "PE",
+        "Country Name": "Peru",
+        "Time Zone": "America/Lima",
+        "UTC Offset": "UTC -05:00"
+    },
+    {
+        "Country Code": "PH",
+        "Country Name": "Philippines",
+        "Time Zone": "Asia/Manila",
+        "UTC Offset": "UTC +08:00"
+    },
+    {
+        "Country Code": "PN",
+        "Country Name": "Pitcairn",
+        "Time Zone": "Pacific/Pitcairn",
+        "UTC Offset": "UTC -08:00"
+    },
+    {
+        "Country Code": "PL",
+        "Country Name": "Poland",
+        "Time Zone": "Europe/Warsaw",
+        "UTC Offset": "UTC +01:00"
+    },
+    {
+        "Country Code": "PT",
+        "Country Name": "Portugal",
+        "Time Zone": "Atlantic/Azores",
+        "UTC Offset": "UTC -01:00"
+    },
+    {
+        "Country Code": "PT",
+        "Country Name": "Portugal",
+        "Time Zone": "Atlantic/Madeira",
+        "UTC Offset": "UTC"
+    },
+    {
+        "Country Code": "PT",
+        "Country Name": "Portugal",
+        "Time Zone": "Europe/Lisbon",
+        "UTC Offset": "UTC"
+    },
+    {
+        "Country Code": "PR",
+        "Country Name": "Puerto Rico",
+        "Time Zone": "America/Puerto_Rico",
+        "UTC Offset": "UTC -04:00"
+    },
+    {
+        "Country Code": "QA",
+        "Country Name": "Qatar",
+        "Time Zone": "Asia/Qatar",
+        "UTC Offset": "UTC +03:00"
+    },
+    {
+        "Country Code": "RO",
+        "Country Name": "Romania",
+        "Time Zone": "Europe/Bucharest",
+        "UTC Offset": "UTC +02:00"
+    },
+    {
+        "Country Code": "RU",
+        "Country Name": "Russian Federation",
+        "Time Zone": "Asia/Anadyr",
+        "UTC Offset": "UTC +12:00"
+    },
+    {
+        "Country Code": "RU",
+        "Country Name": "Russian Federation",
+        "Time Zone": "Asia/Barnaul",
+        "UTC Offset": "UTC +07:00"
+    },
+    {
+        "Country Code": "RU",
+        "Country Name": "Russian Federation",
+        "Time Zone": "Asia/Chita",
+        "UTC Offset": "UTC +09:00"
+    },
+    {
+        "Country Code": "RU",
+        "Country Name": "Russian Federation",
+        "Time Zone": "Asia/Irkutsk",
+        "UTC Offset": "UTC +08:00"
+    },
+    {
+        "Country Code": "RU",
+        "Country Name": "Russian Federation",
+        "Time Zone": "Asia/Kamchatka",
+        "UTC Offset": "UTC +12:00"
+    },
+    {
+        "Country Code": "RU",
+        "Country Name": "Russian Federation",
+        "Time Zone": "Asia/Khandyga",
+        "UTC Offset": "UTC +09:00"
+    },
+    {
+        "Country Code": "RU",
+        "Country Name": "Russian Federation",
+        "Time Zone": "Asia/Krasnoyarsk",
+        "UTC Offset": "UTC +07:00"
+    },
+    {
+        "Country Code": "RU",
+        "Country Name": "Russian Federation",
+        "Time Zone": "Asia/Magadan",
+        "UTC Offset": "UTC +11:00"
+    },
+    {
+        "Country Code": "RU",
+        "Country Name": "Russian Federation",
+        "Time Zone": "Asia/Novokuznetsk",
+        "UTC Offset": "UTC +07:00"
+    },
+    {
+        "Country Code": "RU",
+        "Country Name": "Russian Federation",
+        "Time Zone": "Asia/Novosibirsk",
+        "UTC Offset": "UTC +07:00"
+    },
+    {
+        "Country Code": "RU",
+        "Country Name": "Russian Federation",
+        "Time Zone": "Asia/Omsk",
+        "UTC Offset": "UTC +06:00"
+    },
+    {
+        "Country Code": "RU",
+        "Country Name": "Russian Federation",
+        "Time Zone": "Asia/Sakhalin",
+        "UTC Offset": "UTC +11:00"
+    },
+    {
+        "Country Code": "RU",
+        "Country Name": "Russian Federation",
+        "Time Zone": "Asia/Srednekolymsk",
+        "UTC Offset": "UTC +11:00"
+    },
+    {
+        "Country Code": "RU",
+        "Country Name": "Russian Federation",
+        "Time Zone": "Asia/Tomsk",
+        "UTC Offset": "UTC +07:00"
+    },
+    {
+        "Country Code": "RU",
+        "Country Name": "Russian Federation",
+        "Time Zone": "Asia/Ust-Nera",
+        "UTC Offset": "UTC +10:00"
+    },
+    {
+        "Country Code": "RU",
+        "Country Name": "Russian Federation",
+        "Time Zone": "Asia/Vladivostok",
+        "UTC Offset": "UTC +10:00"
+    },
+    {
+        "Country Code": "RU",
+        "Country Name": "Russian Federation",
+        "Time Zone": "Asia/Yakutsk",
+        "UTC Offset": "UTC +09:00"
+    },
+    {
+        "Country Code": "RU",
+        "Country Name": "Russian Federation",
+        "Time Zone": "Asia/Yekaterinburg",
+        "UTC Offset": "UTC +05:00"
+    },
+    {
+        "Country Code": "RU",
+        "Country Name": "Russian Federation",
+        "Time Zone": "Europe/Astrakhan",
+        "UTC Offset": "UTC +04:00"
+    },
+    {
+        "Country Code": "RU",
+        "Country Name": "Russian Federation",
+        "Time Zone": "Europe/Kaliningrad",
+        "UTC Offset": "UTC +02:00"
+    },
+    {
+        "Country Code": "RU",
+        "Country Name": "Russian Federation",
+        "Time Zone": "Europe/Kirov",
+        "UTC Offset": "UTC +03:00"
+    },
+    {
+        "Country Code": "RU",
+        "Country Name": "Russian Federation",
+        "Time Zone": "Europe/Moscow",
+        "UTC Offset": "UTC +03:00"
+    },
+    {
+        "Country Code": "RU",
+        "Country Name": "Russian Federation",
+        "Time Zone": "Europe/Samara",
+        "UTC Offset": "UTC +04:00"
+    },
+    {
+        "Country Code": "RU",
+        "Country Name": "Russian Federation",
+        "Time Zone": "Europe/Saratov",
+        "UTC Offset": "UTC +04:00"
+    },
+    {
+        "Country Code": "RU",
+        "Country Name": "Russian Federation",
+        "Time Zone": "Europe/Ulyanovsk",
+        "UTC Offset": "UTC +04:00"
+    },
+    {
+        "Country Code": "RU",
+        "Country Name": "Russian Federation",
+        "Time Zone": "Europe/Volgograd",
+        "UTC Offset": "UTC +03:00"
+    },
+    {
+        "Country Code": "RW",
+        "Country Name": "Rwanda",
+        "Time Zone": "Africa/Kigali",
+        "UTC Offset": "UTC +02:00"
+    },
+    {
+        "Country Code": "RE",
+        "Country Name": "R\u00e9union",
+        "Time Zone": "Indian/Reunion",
+        "UTC Offset": "UTC +04:00"
+    },
+    {
+        "Country Code": "BL",
+        "Country Name": "Saint Barth\u00e9lemy",
+        "Time Zone": "America/St_Barthelemy",
+        "UTC Offset": "UTC -04:00"
+    },
+    {
+        "Country Code": "SH",
+        "Country Name": "Saint Helena, Ascension and Tristan da Cunha",
+        "Time Zone": "Atlantic/St_Helena",
+        "UTC Offset": "UTC"
+    },
+    {
+        "Country Code": "KN",
+        "Country Name": "Saint Kitts and Nevis",
+        "Time Zone": "America/St_Kitts",
+        "UTC Offset": "UTC -04:00"
+    },
+    {
+        "Country Code": "LC",
+        "Country Name": "Saint Lucia",
+        "Time Zone": "America/St_Lucia",
+        "UTC Offset": "UTC -04:00"
+    },
+    {
+        "Country Code": "MF",
+        "Country Name": "Saint Martin (French part)",
+        "Time Zone": "America/Marigot",
+        "UTC Offset": "UTC -04:00"
+    },
+    {
+        "Country Code": "PM",
+        "Country Name": "Saint Pierre and Miquelon",
+        "Time Zone": "America/Miquelon",
+        "UTC Offset": "UTC -02:00"
+    },
+    {
+        "Country Code": "VC",
+        "Country Name": "Saint Vincent and the Grenadines",
+        "Time Zone": "America/St_Vincent",
+        "UTC Offset": "UTC -04:00"
+    },
+    {
+        "Country Code": "WS",
+        "Country Name": "Samoa",
+        "Time Zone": "Pacific/Apia",
+        "UTC Offset": "UTC +13:00"
+    },
+    {
+        "Country Code": "SM",
+        "Country Name": "San Marino",
+        "Time Zone": "Europe/San_Marino",
+        "UTC Offset": "UTC +01:00"
+    },
+    {
+        "Country Code": "ST",
+        "Country Name": "Sao Tome and Principe",
+        "Time Zone": "Africa/Sao_Tome",
+        "UTC Offset": "UTC"
+    },
+    {
+        "Country Code": "SA",
+        "Country Name": "Saudi Arabia",
+        "Time Zone": "Asia/Riyadh",
+        "UTC Offset": "UTC +03:00"
+    },
+    {
+        "Country Code": "SN",
+        "Country Name": "Senegal",
+        "Time Zone": "Africa/Dakar",
+        "UTC Offset": "UTC"
+    },
+    {
+        "Country Code": "RS",
+        "Country Name": "Serbia",
+        "Time Zone": "Europe/Belgrade",
+        "UTC Offset": "UTC +01:00"
+    },
+    {
+        "Country Code": "SC",
+        "Country Name": "Seychelles",
+        "Time Zone": "Indian/Mahe",
+        "UTC Offset": "UTC +04:00"
+    },
+    {
+        "Country Code": "SL",
+        "Country Name": "Sierra Leone",
+        "Time Zone": "Africa/Freetown",
+        "UTC Offset": "UTC"
+    },
+    {
+        "Country Code": "SG",
+        "Country Name": "Singapore",
+        "Time Zone": "Asia/Singapore",
+        "UTC Offset": "UTC +08:00"
+    },
+    {
+        "Country Code": "SX",
+        "Country Name": "Sint Maarten (Dutch part)",
+        "Time Zone": "America/Lower_Princes",
+        "UTC Offset": "UTC -04:00"
+    },
+    {
+        "Country Code": "SK",
+        "Country Name": "Slovakia",
+        "Time Zone": "Europe/Bratislava",
+        "UTC Offset": "UTC +01:00"
+    },
+    {
+        "Country Code": "SI",
+        "Country Name": "Slovenia",
+        "Time Zone": "Europe/Ljubljana",
+        "UTC Offset": "UTC +01:00"
+    },
+    {
+        "Country Code": "SB",
+        "Country Name": "Solomon Islands",
+        "Time Zone": "Pacific/Guadalcanal",
+        "UTC Offset": "UTC +11:00"
+    },
+    {
+        "Country Code": "SO",
+        "Country Name": "Somalia",
+        "Time Zone": "Africa/Mogadishu",
+        "UTC Offset": "UTC +03:00"
+    },
+    {
+        "Country Code": "ZA",
+        "Country Name": "South Africa",
+        "Time Zone": "Africa/Johannesburg",
+        "UTC Offset": "UTC +02:00"
+    },
+    {
+        "Country Code": "GS",
+        "Country Name": "South Georgia and the South Sandwich Islands",
+        "Time Zone": "Atlantic/South_Georgia",
+        "UTC Offset": "UTC -02:00"
+    },
+    {
+        "Country Code": "SS",
+        "Country Name": "South Sudan",
+        "Time Zone": "Africa/Juba",
+        "UTC Offset": "UTC +02:00"
+    },
+    {
+        "Country Code": "ES",
+        "Country Name": "Spain",
+        "Time Zone": "Africa/Ceuta",
+        "UTC Offset": "UTC +01:00"
+    },
+    {
+        "Country Code": "ES",
+        "Country Name": "Spain",
+        "Time Zone": "Atlantic/Canary",
+        "UTC Offset": "UTC"
+    },
+    {
+        "Country Code": "ES",
+        "Country Name": "Spain",
+        "Time Zone": "Europe/Madrid",
+        "UTC Offset": "UTC +01:00"
+    },
+    {
+        "Country Code": "LK",
+        "Country Name": "Sri Lanka",
+        "Time Zone": "Asia/Colombo",
+        "UTC Offset": "UTC +05:30"
+    },
+    {
+        "Country Code": "SD",
+        "Country Name": "Sudan",
+        "Time Zone": "Africa/Khartoum",
+        "UTC Offset": "UTC +02:00"
+    },
+    {
+        "Country Code": "SR",
+        "Country Name": "Suriname",
+        "Time Zone": "America/Paramaribo",
+        "UTC Offset": "UTC -03:00"
+    },
+    {
+        "Country Code": "SJ",
+        "Country Name": "Svalbard and Jan Mayen",
+        "Time Zone": "Arctic/Longyearbyen",
+        "UTC Offset": "UTC +01:00"
+    },
+    {
+        "Country Code": "SZ",
+        "Country Name": "Swaziland",
+        "Time Zone": "Africa/Mbabane",
+        "UTC Offset": "UTC +02:00"
+    },
+    {
+        "Country Code": "SE",
+        "Country Name": "Sweden",
+        "Time Zone": "Europe/Stockholm",
+        "UTC Offset": "UTC +01:00"
+    },
+    {
+        "Country Code": "CH",
+        "Country Name": "Switzerland",
+        "Time Zone": "Europe/Zurich",
+        "UTC Offset": "UTC +01:00"
+    },
+    {
+        "Country Code": "SY",
+        "Country Name": "Syrian Arab Republic",
+        "Time Zone": "Asia/Damascus",
+        "UTC Offset": "UTC +03:00"
+    },
+    {
+        "Country Code": "TW",
+        "Country Name": "Taiwan, Province of China",
+        "Time Zone": "Asia/Taipei",
+        "UTC Offset": "UTC +08:00"
+    },
+    {
+        "Country Code": "TJ",
+        "Country Name": "Tajikistan",
+        "Time Zone": "Asia/Dushanbe",
+        "UTC Offset": "UTC +05:00"
+    },
+    {
+        "Country Code": "TZ",
+        "Country Name": "Tanzania, United Republic of",
+        "Time Zone": "Africa/Dar_es_Salaam",
+        "UTC Offset": "UTC +03:00"
+    },
+    {
+        "Country Code": "TH",
+        "Country Name": "Thailand",
+        "Time Zone": "Asia/Bangkok",
+        "UTC Offset": "UTC +07:00"
+    },
+    {
+        "Country Code": "TL",
+        "Country Name": "Timor-Leste",
+        "Time Zone": "Asia/Dili",
+        "UTC Offset": "UTC +09:00"
+    },
+    {
+        "Country Code": "TG",
+        "Country Name": "Togo",
+        "Time Zone": "Africa/Lome",
+        "UTC Offset": "UTC"
+    },
+    {
+        "Country Code": "TK",
+        "Country Name": "Tokelau",
+        "Time Zone": "Pacific/Fakaofo",
+        "UTC Offset": "UTC +13:00"
+    },
+    {
+        "Country Code": "TO",
+        "Country Name": "Tonga",
+        "Time Zone": "Pacific/Tongatapu",
+        "UTC Offset": "UTC +13:00"
+    },
+    {
+        "Country Code": "TT",
+        "Country Name": "Trinidad and Tobago",
+        "Time Zone": "America/Port_of_Spain",
+        "UTC Offset": "UTC -04:00"
+    },
+    {
+        "Country Code": "TN",
+        "Country Name": "Tunisia",
+        "Time Zone": "Africa/Tunis",
+        "UTC Offset": "UTC +01:00"
+    },
+    {
+        "Country Code": "TR",
+        "Country Name": "Turkey",
+        "Time Zone": "Europe/Istanbul",
+        "UTC Offset": "UTC +03:00"
+    },
+    {
+        "Country Code": "TM",
+        "Country Name": "Turkmenistan",
+        "Time Zone": "Asia/Ashgabat",
+        "UTC Offset": "UTC +05:00"
+    },
+    {
+        "Country Code": "TC",
+        "Country Name": "Turks and Caicos Islands",
+        "Time Zone": "America/Grand_Turk",
+        "UTC Offset": "UTC -04:00"
+    },
+    {
+        "Country Code": "TV",
+        "Country Name": "Tuvalu",
+        "Time Zone": "Pacific/Funafuti",
+        "UTC Offset": "UTC +12:00"
+    },
+    {
+        "Country Code": "UG",
+        "Country Name": "Uganda",
+        "Time Zone": "Africa/Kampala",
+        "UTC Offset": "UTC +03:00"
+    },
+    {
+        "Country Code": "UA",
+        "Country Name": "Ukraine",
+        "Time Zone": "Europe/Kyiv",
+        "UTC Offset": "UTC +02:00"
+    },
+    {
+        "Country Code": "UA",
+        "Country Name": "Ukraine",
+        "Time Zone": "Europe/Simferopol",
+        "UTC Offset": "UTC +03:00"
+    },
+    {
+        "Country Code": "AE",
+        "Country Name": "United Arab Emirates",
+        "Time Zone": "Asia/Dubai",
+        "UTC Offset": "UTC +04:00"
+    },
+    {
+        "Country Code": "GB",
+        "Country Name": "United Kingdom",
+        "Time Zone": "Europe/London",
+        "UTC Offset": "UTC"
+    },
+    {
+        "Country Code": "US",
+        "Country Name": "United States",
+        "Time Zone": "America/Adak",
+        "UTC Offset": "UTC -09:00"
+    },
+    {
+        "Country Code": "US",
+        "Country Name": "United States",
+        "Time Zone": "America/Anchorage",
+        "UTC Offset": "UTC -08:00"
+    },
+    {
+        "Country Code": "US",
+        "Country Name": "United States",
+        "Time Zone": "America/Boise",
+        "UTC Offset": "UTC -06:00"
+    },
+    {
+        "Country Code": "US",
+        "Country Name": "United States",
+        "Time Zone": "America/Chicago",
+        "UTC Offset": "UTC -05:00"
+    },
+    {
+        "Country Code": "US",
+        "Country Name": "United States",
+        "Time Zone": "America/Denver",
+        "UTC Offset": "UTC -06:00"
+    },
+    {
+        "Country Code": "US",
+        "Country Name": "United States",
+        "Time Zone": "America/Detroit",
+        "UTC Offset": "UTC -04:00"
+    },
+    {
+        "Country Code": "US",
+        "Country Name": "United States",
+        "Time Zone": "America/Indiana/Indianapolis",
+        "UTC Offset": "UTC -04:00"
+    },
+    {
+        "Country Code": "US",
+        "Country Name": "United States",
+        "Time Zone": "America/Indiana/Knox",
+        "UTC Offset": "UTC -05:00"
+    },
+    {
+        "Country Code": "US",
+        "Country Name": "United States",
+        "Time Zone": "America/Indiana/Marengo",
+        "UTC Offset": "UTC -04:00"
+    },
+    {
+        "Country Code": "US",
+        "Country Name": "United States",
+        "Time Zone": "America/Indiana/Petersburg",
+        "UTC Offset": "UTC -04:00"
+    },
+    {
+        "Country Code": "US",
+        "Country Name": "United States",
+        "Time Zone": "America/Indiana/Tell_City",
+        "UTC Offset": "UTC -05:00"
+    },
+    {
+        "Country Code": "US",
+        "Country Name": "United States",
+        "Time Zone": "America/Indiana/Vevay",
+        "UTC Offset": "UTC -04:00"
+    },
+    {
+        "Country Code": "US",
+        "Country Name": "United States",
+        "Time Zone": "America/Indiana/Vincennes",
+        "UTC Offset": "UTC -04:00"
+    },
+    {
+        "Country Code": "US",
+        "Country Name": "United States",
+        "Time Zone": "America/Indiana/Winamac",
+        "UTC Offset": "UTC -04:00"
+    },
+    {
+        "Country Code": "US",
+        "Country Name": "United States",
+        "Time Zone": "America/Juneau",
+        "UTC Offset": "UTC -08:00"
+    },
+    {
+        "Country Code": "US",
+        "Country Name": "United States",
+        "Time Zone": "America/Kentucky/Louisville",
+        "UTC Offset": "UTC -04:00"
+    },
+    {
+        "Country Code": "US",
+        "Country Name": "United States",
+        "Time Zone": "America/Kentucky/Monticello",
+        "UTC Offset": "UTC -04:00"
+    },
+    {
+        "Country Code": "US",
+        "Country Name": "United States",
+        "Time Zone": "America/Los_Angeles",
+        "UTC Offset": "UTC -07:00"
+    },
+    {
+        "Country Code": "US",
+        "Country Name": "United States",
+        "Time Zone": "America/Menominee",
+        "UTC Offset": "UTC -05:00"
+    },
+    {
+        "Country Code": "US",
+        "Country Name": "United States",
+        "Time Zone": "America/Metlakatla",
+        "UTC Offset": "UTC -08:00"
+    },
+    {
+        "Country Code": "US",
+        "Country Name": "United States",
+        "Time Zone": "America/New_York",
+        "UTC Offset": "UTC -04:00"
+    },
+    {
+        "Country Code": "US",
+        "Country Name": "United States",
+        "Time Zone": "America/Nome",
+        "UTC Offset": "UTC -08:00"
+    },
+    {
+        "Country Code": "US",
+        "Country Name": "United States",
+        "Time Zone": "America/North_Dakota/Beulah",
+        "UTC Offset": "UTC -05:00"
+    },
+    {
+        "Country Code": "US",
+        "Country Name": "United States",
+        "Time Zone": "America/North_Dakota/Center",
+        "UTC Offset": "UTC -05:00"
+    },
+    {
+        "Country Code": "US",
+        "Country Name": "United States",
+        "Time Zone": "America/North_Dakota/New_Salem",
+        "UTC Offset": "UTC -05:00"
+    },
+    {
+        "Country Code": "US",
+        "Country Name": "United States",
+        "Time Zone": "America/Phoenix",
+        "UTC Offset": "UTC -07:00"
+    },
+    {
+        "Country Code": "US",
+        "Country Name": "United States",
+        "Time Zone": "America/Sitka",
+        "UTC Offset": "UTC -08:00"
+    },
+    {
+        "Country Code": "US",
+        "Country Name": "United States",
+        "Time Zone": "America/Yakutat",
+        "UTC Offset": "UTC -08:00"
+    },
+    {
+        "Country Code": "US",
+        "Country Name": "United States",
+        "Time Zone": "Pacific/Honolulu",
+        "UTC Offset": "UTC -10:00"
+    },
+    {
+        "Country Code": "UM",
+        "Country Name": "United States Minor Outlying Islands",
+        "Time Zone": "Pacific/Midway",
+        "UTC Offset": "UTC -11:00"
+    },
+    {
+        "Country Code": "UM",
+        "Country Name": "United States Minor Outlying Islands",
+        "Time Zone": "Pacific/Wake",
+        "UTC Offset": "UTC +12:00"
+    },
+    {
+        "Country Code": "UY",
+        "Country Name": "Uruguay",
+        "Time Zone": "America/Montevideo",
+        "UTC Offset": "UTC -03:00"
+    },
+    {
+        "Country Code": "UZ",
+        "Country Name": "Uzbekistan",
+        "Time Zone": "Asia/Samarkand",
+        "UTC Offset": "UTC +05:00"
+    },
+    {
+        "Country Code": "UZ",
+        "Country Name": "Uzbekistan",
+        "Time Zone": "Asia/Tashkent",
+        "UTC Offset": "UTC +05:00"
+    },
+    {
+        "Country Code": "VU",
+        "Country Name": "Vanuatu",
+        "Time Zone": "Pacific/Efate",
+        "UTC Offset": "UTC +11:00"
+    },
+    {
+        "Country Code": "VE",
+        "Country Name": "Venezuela, Bolivarian Republic of",
+        "Time Zone": "America/Caracas",
+        "UTC Offset": "UTC -04:00"
+    },
+    {
+        "Country Code": "VN",
+        "Country Name": "Viet Nam",
+        "Time Zone": "Asia/Ho_Chi_Minh",
+        "UTC Offset": "UTC +07:00"
+    },
+    {
+        "Country Code": "VG",
+        "Country Name": "Virgin Islands, British",
+        "Time Zone": "America/Tortola",
+        "UTC Offset": "UTC -04:00"
+    },
+    {
+        "Country Code": "VI",
+        "Country Name": "Virgin Islands, U.S.",
+        "Time Zone": "America/St_Thomas",
+        "UTC Offset": "UTC -04:00"
+    },
+    {
+        "Country Code": "WF",
+        "Country Name": "Wallis and Futuna",
+        "Time Zone": "Pacific/Wallis",
+        "UTC Offset": "UTC +12:00"
+    },
+    {
+        "Country Code": "YE",
+        "Country Name": "Yemen",
+        "Time Zone": "Asia/Aden",
+        "UTC Offset": "UTC +03:00"
+    },
+    {
+        "Country Code": "ZM",
+        "Country Name": "Zambia",
+        "Time Zone": "Africa/Lusaka",
+        "UTC Offset": "UTC +02:00"
+    },
+    {
+        "Country Code": "ZW",
+        "Country Name": "Zimbabwe",
+        "Time Zone": "Africa/Harare",
+        "UTC Offset": "UTC +02:00"
+    },
+    {
+        "Country Code": "AX",
+        "Country Name": "Aland Islands",
+        "Time Zone": "Europe/Mariehamn",
+        "UTC Offset": "UTC +02:00"
+    }
+]

@@ -1,0 +1,13 @@
+class CachedKeys:
+    request = 'request'
+    wallet_overview = 'wallet_overview'
+    top_tokens_by_chain = 'top_tokens_by_chain'
+    top_nfts_by_chain = 'top_nfts_by_chain'
+    trending_tokens = 'trending_tokens'
+    dapp_protocols = 'dapp_protocols'
+    protocol_assets = 'protocol_assets'
+    protocols_info = 'protocols_info'
+    dex_pairs = 'dex_pairs'
+    blocks_number_24h_ago = 'blocks_number_24h_ago'
+    block_number = 'block_number'
+    exchange_addresses = 'exchange_addresses'
