@@ -16,13 +16,16 @@ class ScanCrawler(BaseCrawler):
         super().__init__()
         self.db = MongoDB()
 
-    def crawl_balance_usd(self, cursor=None):
+    def crawl_balance_usd(self, cursor=None, start=0, end=0):
         if not cursor:
             cursor = self.db.get_social_users_by_filter(filter_={'flag': {'$in': [0, 1]}}, projection=['address', 'addresses', 'balanceUSD'])
 
         driver = self.get_driver()
 
-        count = 0
+        count = start
+        if end == 0 or end > len(cursor):
+            end = len(cursor)
+        cursor = cursor[start: end]
         for doc in cursor:
             count += 1
             address = doc.get('address', None)
@@ -30,7 +33,7 @@ class ScanCrawler(BaseCrawler):
                 address = doc.get('addresses').get('ethereum')
 
             logger.info(f"Execute address {address} {count}")
-            url = f"https://bscscan.com/address/{address}"
+            url = f"https://etherscan.io/address/{address}"
             if count < 0:
                 continue
             else:
@@ -51,6 +54,6 @@ class ScanCrawler(BaseCrawler):
                     logger.exception(e)
                     balance_token = doc.get('balanceUSD', 0)
 
-            user = {"_id": doc.get('_id'), 'balanceUSD': balance_token}
+            user = {"_id": "0x1_" + address, 'balanceUSD': balance_token}
             print(user)
-            self.db.update_social_user(user)
+            # self.db.update_social_user(user)
