@@ -2,6 +2,11 @@ import time
 import json
 
 from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup as soup
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.chrome.service import Service as ChromeService
+from webdriver_manager.chrome import ChromeDriverManager
 
 from src.service.crawler.base_crawler import BaseCrawler
 from src.database.mongodb.mongodb import MongoDB
@@ -11,9 +16,8 @@ from src.utils.logger_utils import get_logger
 logger = get_logger('Scan Crawler')
 
 
-class ScanCrawler(BaseCrawler):
+class ScanCrawler:
     def __init__(self):
-        super().__init__()
         self.db = MongoDB()
 
     def crawl_balance_usd(self, cursor=None, start=0, end=0):
@@ -56,4 +60,14 @@ class ScanCrawler(BaseCrawler):
 
             user = {"_id": "0x1_" + address, 'balanceUSD': balance_token}
             print(user)
-            # self.db.update_social_user(user)
+            self.db.update_social_user(user)
+
+    def get_driver(self):
+        chrome_options = Options()
+        # chrome_options.binary_location = '/usr/local/bin/chromedriver'
+        chrome_options.add_argument('--headless')
+        user_agent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36'
+        chrome_options.add_argument(f'user-agent={user_agent}')
+        chrome_options.add_argument("window-size=1920,1080")
+        driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()), options=chrome_options)
+        return driver
