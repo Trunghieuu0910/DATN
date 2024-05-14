@@ -207,13 +207,12 @@ class TransactionsAnalysis:
             except:
                 print("Continue")
 
-    @classmethod
-    def get_data(cls, address, page):
+    def get_data(self, address, page):
 
         url = f"https://api.chainbase.online/v1/account/tokens?chain_id=1&address={address}&limit=100&page={page}"
         headers = {
             "accept": "application/json",
-            "x-api-key": "2g5g889KGLeY7I3k8lSqQ98Aq5l"
+            "x-api-key": self.api_key
         }
 
         response = requests.get(url, headers=headers)
