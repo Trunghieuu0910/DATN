@@ -149,8 +149,7 @@ class TransactionsAnalysis:
                     _id = "0x89_" + wallet_address
                     user = {"_id": _id, 'balanceUSD': balance}
                     print(user)
-                    # self._db.update_social_user(user)
-
+                    self._db.update_social_user(user)
                 sub_count = 0
                 list_address = ""
 
