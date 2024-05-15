@@ -105,20 +105,21 @@ class TransactionsAnalysis:
             print(f"Execute address {address} {count}")
             count += 1
             try:
-                url = f'https://api.etherscan.io/api?module=account&action=txlist&address={address}&startblock=0&endblock=99999999&page=1&offset=10000&sort=asc&apikey={self.api_key}'
+                url = f'https://api.polygonscan.com/api?module=account&action=txlist&address={address}&startblock=0&endblock=99999999&page=1&offset=10000&sort=asc&apikey={self.api_key}'
                 response = requests.get(url)
                 data = dict(response.json())
                 transactions = data.get('result')
-                user = {'0x1': {}, '_id': '0x1_' + address, 'chainId': '0x1', 'regional': doc.get('regional')}
+                user = {'0x89': {}, '_id': '0x89_' + address, 'chainId': '0x89', 'regional': doc.get('regional'), 'address': address}
                 for tx in transactions:
                     if tx.get('from') == address:
-                        user['0x1'][tx.get('hash')] = {'timestamp': tx.get('timeStamp'), 'value': tx.get('value', 0),
-                                                       'gas': tx.get('gas', 0), 'gas_price': doc.get('gasPrice', 0)}
+                        user['0x89'][tx.get('hash')] = {'timestamp': tx.get('timeStamp'), 'value': tx.get('value', 0),
+                                                        'gas': tx.get('gas', 0), 'gas_price': doc.get('gasPrice', 0)}
 
                 self._db.update_social_user(user)
             except Exception as e:
                 print(f"ERROR address {address} {count}")
                 logger.exception(e)
+
     def get_balance_by_api(self, cursor, start=0, end=0):
         count = start
         if end == 0 or end > len(cursor):
