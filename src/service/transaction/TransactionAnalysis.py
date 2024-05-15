@@ -153,6 +153,21 @@ class TransactionsAnalysis:
                 sub_count = 0
                 list_address = ""
 
+        if list_address:
+            list_address = list_address[:len(list_address) - 1]
+            url = f"https://api.polygonscan.com/api?module=account&action=balancemulti&address={list_address}&tag=latest&apikey={self.api_key}"
+            response = requests.get(url)
+            data = dict(response.json())
+            res = data.get('result')
+            for wallet in res:
+                wallet_address = wallet.get('account')
+                balance = wallet.get('balance', 0)
+                balance = int(balance) / 10 ** 18 * 0.68
+                _id = "0x89_" + wallet_address
+                user = {"_id": _id, 'balanceUSD': balance}
+                print(user)
+                self._db.update_social_user(user)
+
     def get_tokens_of_wallets_moralis(self, cursor):
         count = 0
         for doc in cursor:
@@ -176,14 +191,8 @@ class TransactionsAnalysis:
 
             print(result)
 
-    def get_tokens_of_wallets_chainbase(self, old_cursor, start=0, end=0):
-        count = start
-        cursor = []
-        for doc in old_cursor:
-            cursor.append(doc)
-        if end == 0 or end > len(cursor):
-            end = len(cursor)
-        cursor = cursor[start: end]
+    def get_tokens_of_wallets_chainbase(self, cursor, start=0, end=0):
+        count = 0
         for doc in cursor:
             page = 1
             tokens = doc.get('newTokens', [])
@@ -211,7 +220,7 @@ class TransactionsAnalysis:
 
     def get_data(self, address, page):
 
-        url = f"https://api.chainbase.online/v1/account/tokens?chain_id=1&address={address}&limit=100&page={page}"
+        url = f"https://api.chainbase.online/v1/account/tokens?chain_id=137&address={address}&limit=100&page={page}"
         headers = {
             "accept": "application/json",
             "x-api-key": self.api_key
