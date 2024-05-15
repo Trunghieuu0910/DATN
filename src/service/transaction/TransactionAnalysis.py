@@ -141,18 +141,18 @@ class TransactionsAnalysis:
 
             if sub_count == 20:
                 list_address = list_address[:len(list_address) - 1]
-                url = f"https://api.etherscan.io/api?module=account&action=balancemulti&address={list_address}&tag=latest&apikey={self.api_key}"
+                url = f"https://api.polygonscan.com/api?module=account&action=balancemulti&address={list_address}&tag=latest&apikey={self.api_key}"
                 response = requests.get(url)
                 data = dict(response.json())
                 res = data.get('result')
                 for wallet in res:
                     wallet_address = wallet.get('account')
                     balance = wallet.get('balance', 0)
-                    balance = int(balance) / 10 ** 18 * 2900
-                    _id = "0x1_" + wallet_address
+                    balance = int(balance) / 10 ** 18 * 0.66
+                    _id = "0x89_" + wallet_address
                     user = {"_id": _id, 'balanceUSD': balance}
                     print(user)
-                    self._db.update_social_user(user)
+                    # self._db.update_social_user(user)
 
                 sub_count = 0
                 list_address = ""
