@@ -56,7 +56,7 @@ class ScanCrawler:
 
             user = {"_id": "0x1_" + address, 'balanceUSD': balance_token}
             print(user)
-            # self.db.update_social_user(user)
+            self.db.update_social_user(user)
 
     def get_driver(self):
         chrome_options = Options()
