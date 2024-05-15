@@ -204,9 +204,8 @@ class TransactionsAnalysis:
                     page += 1
                     data = self.get_data(address, page)
                     tokens = tokens + data
-                user = {"_id": "0x1_" + address, "newTokens": tokens, 'address': address}
+                user = {"_id": "0x89_" + address, "newTokens": tokens, 'address': address}
                 print(len(tokens))
-                # print(user)
                 self._db.update_social_user(user)
             except:
                 print("Continue")
