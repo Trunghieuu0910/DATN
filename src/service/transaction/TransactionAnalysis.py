@@ -205,7 +205,7 @@ class TransactionsAnalysis:
 
             data = self.get_data(address, page)
             if not data:
-                data = []
+                continue
             try:
                 tokens = tokens + data
                 while len(data) == 100:
@@ -217,6 +217,7 @@ class TransactionsAnalysis:
                 self._db.update_social_user(user)
             except:
                 print("Continue")
+                write_error_file('polygon.txt', address)
 
     def get_data(self, address, page):
 
@@ -232,6 +233,7 @@ class TransactionsAnalysis:
             data = res.get('data')
             return data
         else:
+            print("Write error")
             write_error_file('polygon.txt', address)
-            raise Exception("Continue")
+            return []
 
