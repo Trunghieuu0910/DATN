@@ -121,10 +121,7 @@ class TransactionsAnalysis:
                 logger.exception(e)
 
     def get_balance_by_api(self, cursor, start=0, end=0):
-        count = start
-        if end == 0 or end > len(cursor):
-            end = len(cursor)
-        cursor = cursor[start: end]
+        count = 0
         sub_count = 0
         list_address = ""
         _ids = {}
@@ -141,18 +138,18 @@ class TransactionsAnalysis:
 
             if sub_count == 20:
                 list_address = list_address[:len(list_address) - 1]
-                url = f"https://api.polygonscan.com/api?module=account&action=balancemulti&address={list_address}&tag=latest&apikey={self.api_key}"
+                url = f"https://api.etherscan.io/api?module=account&action=balancemulti&address={list_address}&tag=latest&apikey={self.api_key}"
                 response = requests.get(url)
                 data = dict(response.json())
                 res = data.get('result')
                 for wallet in res:
                     wallet_address = wallet.get('account')
                     balance = wallet.get('balance', 0)
-                    balance = int(balance) / 10 ** 18 * 0.66
-                    _id = "0x89_" + wallet_address
+                    balance = int(balance) / 10 ** 18 * 2980
+                    _id = "0x1_" + wallet_address
                     user = {"_id": _id, 'balanceUSD': balance}
                     print(user)
-                    # self._db.update_social_user(user)
+                    self._db.update_social_user(user)
 
                 sub_count = 0
                 list_address = ""
@@ -180,8 +177,11 @@ class TransactionsAnalysis:
 
             print(result)
 
-    def get_tokens_of_wallets_chainbase(self, cursor, start=0, end=0):
+    def get_tokens_of_wallets_chainbase(self, old_cursor, start=0, end=0):
         count = start
+        cursor = []
+        for doc in old_cursor:
+            cursor.append(doc)
         if end == 0 or end > len(cursor):
             end = len(cursor)
         cursor = cursor[start: end]
