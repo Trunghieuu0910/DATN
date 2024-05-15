@@ -3,7 +3,7 @@ import time
 from src.database.mongodb.mongodb import MongoDB
 from src.database.mongodb.etl_db import BlockchainETL
 from src.utils.logger_utils import get_logger
-
+from src.utils.file_utils import write_error_file
 from moralis import evm_api
 import requests
 
@@ -194,10 +194,30 @@ class TransactionsAnalysis:
     def get_tokens_of_wallets_chainbase(self, cursor, start=0, end=0):
         count = 0
         for doc in cursor:
+            page = 1
+            tokens = doc.get('newTokens', [])
+            address = doc.get('address', None)
+            if not address:
+                address = doc.get('addresses').get('ethereum')
+
+            print(f"Execute address {address} {count}")
+            count += 1
+
+            data = self.get_data(address, page)
+            if not data:
+                data = []
             try:
-                count = self.crawl_data_chainbase(doc, count)
+                tokens = tokens + data
+                while len(data) == 100:
+                    page += 1
+                    data = self.get_data(address, page)
+                    tokens = tokens + data
+                user = {"_id": "0x89_" + address, "newTokens": tokens, 'address': address}
+                print(len(tokens))
+                self._db.update_social_user(user)
             except:
-                count = self.crawl_data_chainbase(doc, count)
+                write_error_file('polygon.txt', address)
+                print("Continue")
 
     def get_data(self, address, page):
 
@@ -211,26 +231,3 @@ class TransactionsAnalysis:
         res = response.json()
         data = res.get('data')
         return data
-
-    def crawl_data_chainbase(self, doc, count):
-        page = 1
-        tokens = doc.get('newTokens', [])
-        address = doc.get('address', None)
-        if not address:
-            address = doc.get('addresses').get('ethereum')
-
-        print(f"Execute address {address} {count}")
-        count += 1
-
-        data = self.get_data(address, page)
-        if not data:
-            data = []
-        tokens = tokens + data
-        while len(data) == 100:
-            page += 1
-            data = self.get_data(address, page)
-            tokens = tokens + data
-        user = {"_id": "0x89_" + address, "newTokens": tokens, 'address': address}
-        print(len(tokens))
-        # self._db.update_social_user(user)
-        return count
