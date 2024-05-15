@@ -215,7 +215,7 @@ class TransactionsAnalysis:
                 user = {"_id": "0x89_" + address, "newTokens": tokens, 'address': address}
                 print(len(tokens))
                 self._db.update_social_user(user)
-                time.sleep(0.5)
+                time.sleep(1)
             except:
                 print("Continue")
 
