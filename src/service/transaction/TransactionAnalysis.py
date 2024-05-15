@@ -194,30 +194,10 @@ class TransactionsAnalysis:
     def get_tokens_of_wallets_chainbase(self, cursor, start=0, end=0):
         count = 0
         for doc in cursor:
-            page = 1
-            tokens = doc.get('newTokens', [])
-            address = doc.get('address', None)
-            if not address:
-                address = doc.get('addresses').get('ethereum')
-
-            print(f"Execute address {address} {count}")
-            count += 1
-
-            data = self.get_data(address, page)
-            if not data:
-                data = []
             try:
-                tokens = tokens + data
-                while len(data) == 100:
-                    page += 1
-                    data = self.get_data(address, page)
-                    tokens = tokens + data
-                user = {"_id": "0x89_" + address, "newTokens": tokens, 'address': address}
-                print(len(tokens))
-                self._db.update_social_user(user)
-                time.sleep(1)
+                count = self.crawl_data_chainbase(doc, count)
             except:
-                print("Continue")
+                count = self.crawl_data_chainbase(doc, count)
 
     def get_data(self, address, page):
 
@@ -231,3 +211,26 @@ class TransactionsAnalysis:
         res = response.json()
         data = res.get('data')
         return data
+
+    def crawl_data_chainbase(self, doc, count):
+        page = 1
+        tokens = doc.get('newTokens', [])
+        address = doc.get('address', None)
+        if not address:
+            address = doc.get('addresses').get('ethereum')
+
+        print(f"Execute address {address} {count}")
+        count += 1
+
+        data = self.get_data(address, page)
+        if not data:
+            data = []
+        tokens = tokens + data
+        while len(data) == 100:
+            page += 1
+            data = self.get_data(address, page)
+            tokens = tokens + data
+        user = {"_id": "0x89_" + address, "newTokens": tokens, 'address': address}
+        print(len(tokens))
+        # self._db.update_social_user(user)
+        return count
