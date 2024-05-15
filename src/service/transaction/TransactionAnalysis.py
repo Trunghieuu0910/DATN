@@ -216,7 +216,6 @@ class TransactionsAnalysis:
                 print(len(tokens))
                 self._db.update_social_user(user)
             except:
-                write_error_file('polygon.txt', address)
                 print("Continue")
 
     def get_data(self, address, page):
@@ -229,5 +228,10 @@ class TransactionsAnalysis:
 
         response = requests.get(url, headers=headers)
         res = response.json()
-        data = res.get('data')
-        return data
+        if res.get('message') == "ok":
+            data = res.get('data')
+            return data
+        else:
+            write_error_file('polygon.txt', address)
+            raise Exception
+
