@@ -33,7 +33,7 @@ class ScanCrawler:
                 address = doc.get('addresses').get('ethereum')
 
             logger.info(f"Execute address {address} {count}")
-            url = f"https://etherscan.io/address/{address}"
+            url = f"https://polygonscan.com/address/{address}"
             if count < 0:
                 continue
             else:
@@ -54,7 +54,7 @@ class ScanCrawler:
                     logger.exception(e)
                     balance_token = doc.get('balanceUSD', 0)
 
-            user = {"_id": "0x1_" + address, 'balanceUSD': balance_token}
+            user = {"_id": "0x89_" + address, 'balanceUSD': balance_token}
             print(user)
             self.db.update_social_user(user)
 
