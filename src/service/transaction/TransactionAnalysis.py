@@ -233,5 +233,5 @@ class TransactionsAnalysis:
             return data
         else:
             write_error_file('polygon.txt', address)
-            raise Exception
+            raise Exception("Continue")
 
