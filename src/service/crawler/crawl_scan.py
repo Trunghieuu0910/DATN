@@ -25,11 +25,7 @@ class ScanCrawler:
             cursor = self.db.get_social_users_by_filter(filter_={'flag': {'$in': [0, 1]}}, projection=['address', 'addresses', 'balanceUSD'])
 
         driver = self.get_driver()
-
-        count = start
-        if end == 0 or end > len(cursor):
-            end = len(cursor)
-        cursor = cursor[start: end]
+        count = 0
         for doc in cursor:
             count += 1
             address = doc.get('address', None)
@@ -52,15 +48,15 @@ class ScanCrawler:
                     balance_token = balance_token[start + 1:]
                     balance_token = balance_token.replace(",", "")
                     balance_token = float(balance_token)
+                    print(f'Native balance is {doc.get("balanceUSD")}')
                     balance_token = balance_token + doc.get('balanceUSD', 0)
-                    write_error_file('last_count.txt', str(count))
                 except Exception as e:
                     logger.exception(e)
                     balance_token = doc.get('balanceUSD', 0)
 
             user = {"_id": "0x1_" + address, 'balanceUSD': balance_token}
             print(user)
-            self.db.update_social_user(user)
+            # self.db.update_social_user(user)
 
     def get_driver(self):
         chrome_options = Options()
