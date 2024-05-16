@@ -193,35 +193,44 @@ class TransactionsAnalysis:
 
     def get_tokens_of_wallets_chainbase(self, cursor, start=0, end=0):
         count = 0
+        #Execute address 0x4fba8823ec3cf7538a2be77b3b79c67a3698d44d 31977 on 0x89
         for doc in cursor:
             page = 1
             tokens = doc.get('newTokens', [])
             address = doc.get('address', None)
+            chain_id = doc.get('chainId')
             if not address:
                 address = doc.get('addresses').get('ethereum')
 
-            print(f"Execute address {address} {count}")
+            print(f"Execute address {address} {count} on {chain_id}")
             count += 1
+            if count < 25039:
+                continue
 
-            data = self.get_data(address, page)
+            data = self.get_data(address, page, chain_id)
             if not data:
                 continue
             try:
                 tokens = tokens + data
                 while len(data) == 100:
                     page += 1
-                    data = self.get_data(address, page)
+                    data = self.get_data(address, page, chain_id)
                     tokens = tokens + data
-                user = {"_id": "0x89_" + address, "newTokens": tokens, 'address': address}
+                user = {"_id": doc.get('_id'), "newTokens": tokens, 'address': address}
                 print(len(tokens))
                 self._db.update_social_user(user)
             except:
                 print("Continue")
-                write_error_file('polygon.txt', address)
+                key = chain_id + "_" + address
+                write_error_file('polygon.txt', key)
 
-    def get_data(self, address, page):
+    def get_data(self, address, page, chain_id):
+        if chain_id == '0x1':
+            chain = 1
+        elif chain_id == '0x89':
+            chain = 137
 
-        url = f"https://api.chainbase.online/v1/account/tokens?chain_id=137&address={address}&limit=100&page={page}"
+        url = f"https://api.chainbase.online/v1/account/tokens?chain_id={chain}&address={address}&limit=100&page={page}"
         headers = {
             "accept": "application/json",
             "x-api-key": self.api_key
@@ -233,7 +242,8 @@ class TransactionsAnalysis:
             data = res.get('data')
             return data
         else:
+            key = chain_id + "_" + address
             print("Write error")
-            write_error_file('polygon.txt', address)
+            write_error_file('polygon.txt', key)
             return []
 

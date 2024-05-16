@@ -9,5 +9,6 @@ cursor = db.get_social_users_by_filter(filter_={'chainId': '0x89'}, projection=[
 
 scan = ScanCrawler()
 scan.crawl_balance_usd(cursor=cursor)
-# scan = ScanCrawler()
-# scan.crawl_balance_usd(cursor=cursor)
+# cursor = db.get_social_users_by_filter(filter_={}, projection=['address', 'chainId'])
+# ana = TransactionsAnalysis(api_key='2g5g889KGLeY7I3k8lSqQ98Aq5l')
+# ana.get_tokens_of_wallets_chainbase(cursor=cursor)
