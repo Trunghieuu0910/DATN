@@ -105,17 +105,18 @@ class TransactionsAnalysis:
             print(f"Execute address {address} {count}")
             count += 1
             try:
-                url = f'https://api.polygonscan.com/api?module=account&action=txlist&address={address}&startblock=0&endblock=99999999&page=1&offset=10000&sort=asc&apikey={self.api_key}'
+                url = f'https://api.etherscan.io/api?module=account&action=txlist&address={address}&startblock=0&endblock=99999999&page=1&offset=10000&sort=asc&apikey={self.api_key}'
                 response = requests.get(url)
                 data = dict(response.json())
                 transactions = data.get('result')
-                user = {'0x89': {}, '_id': '0x89_' + address, 'chainId': '0x89', 'regional': doc.get('regional'), 'address': address}
+                user = {'0x1': {}, '_id': '0x1_' + address, 'chainId': '0x1', 'regional': doc.get('regional'), 'address': address}
                 for tx in transactions:
                     if tx.get('from') == address:
-                        user['0x89'][tx.get('hash')] = {'timestamp': tx.get('timeStamp'), 'value': tx.get('value', 0),
+                        user['0x1'][tx.get('hash')] = {'timestamp': tx.get('timeStamp'), 'value': tx.get('value', 0),
                                                         'gas': tx.get('gas', 0), 'gas_price': doc.get('gasPrice', 0)}
 
                 self._db.update_social_user(user)
+                print(user)
             except Exception as e:
                 print(f"ERROR address {address} {count}")
                 logger.exception(e)
@@ -193,7 +194,8 @@ class TransactionsAnalysis:
 
     def get_tokens_of_wallets_chainbase(self, cursor, start=0, end=0):
         count = 0
-        #Execute address 0x4fba8823ec3cf7538a2be77b3b79c67a3698d44d 31977 on 0x89
+        #Execute address 0x065ed96171f05b889508c16036dd7c2494c751cc 35849 on 0x89
+
         for doc in cursor:
             page = 1
             tokens = doc.get('newTokens', [])
@@ -204,8 +206,6 @@ class TransactionsAnalysis:
 
             print(f"Execute address {address} {count} on {chain_id}")
             count += 1
-            if count < 25039:
-                continue
 
             data = self.get_data(address, page, chain_id)
             if not data:
@@ -222,7 +222,7 @@ class TransactionsAnalysis:
             except:
                 print("Continue")
                 key = chain_id + "_" + address
-                write_error_file('polygon.txt', key)
+                write_error_file('polygon1.txt', key)
 
     def get_data(self, address, page, chain_id):
         if chain_id == '0x1':
@@ -244,6 +244,6 @@ class TransactionsAnalysis:
         else:
             key = chain_id + "_" + address
             print("Write error")
-            write_error_file('polygon.txt', key)
+            write_error_file('polygon1.txt', key)
             return []
 

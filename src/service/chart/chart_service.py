@@ -94,13 +94,15 @@ class ChartService:
         plt.title(f'Distribution of Country in {regional}')
         plt.show()
 
-    def time_tx_in_regional(self, regional, chain_id='0x38', limit=10000):
-        cursor = self._db.get_social_users_by_regional(regional=regional, projection=['regional', chain_id])
+    def time_tx_in_regional(self, regional, limit=10000):
+        cursor = self._db.get_social_users_by_regional(regional=regional, projection=['regional', '0x1', '0x89', '0x38', 'chainId'])
         res = {}
         test = {}
         ccount = 0
         for c in cursor:
             count = 0
+            chain_id = c.get('chainId')
+            print(chain_id)
             txs = c.get(chain_id)
             for tx, v in txs.items():
                 if count > limit:
@@ -125,13 +127,13 @@ class ChartService:
         plt.ylabel('Values')
         plt.title(f'Time Transactions {regional}')
 
-        test = dict(sorted(test.items(), key=lambda x: x[1], reverse=False))
-        for k, v in test.items():
-            if v >= 0.4:
-                user = {"_id": k, 'flag': -4}
-                print(f"{k} {v}")
-                ccount += 1
-                # self._db.update_social_user(user)
+        # test = dict(sorted(test.items(), key=lambda x: x[1], reverse=False))
+        # for k, v in test.items():
+        #     if v >= 0.4:
+        #         user = {"_id": k, 'flag': -4}
+        #         print(f"{k} {v}")
+        #         ccount += 1
+        #         # self._db.update_social_user(user)
         print(ccount)
 
         plt.show()

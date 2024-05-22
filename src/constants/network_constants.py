@@ -68,6 +68,12 @@ class Chain:
         POLKADOT: 'Polkadot'
     }
 
+    token_price = {
+        BSC: 580,
+        ETH: 2980,
+        POLYGON: 0.68
+    }
+
     explorers = {
         BSC: 'https://bscscan.com/',
         ETH: 'https://etherscan.io/',
