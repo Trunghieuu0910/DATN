@@ -74,6 +74,18 @@ class Chain:
         POLYGON: 0.68
     }
 
+    api_key = {
+        BSC: os.getenv('BSC_API_KEY'),
+        ETH: os.getenv('ETH_API_KEY'),
+        POLYGON: os.getenv('POLYGON_API_KEY')
+    }
+
+    web3_scan = {
+        ETH: 'https://api.etherscan.io',
+        BSC: 'https://api.bscscan.com',
+        POLYGON: 'https://api.polygonscan.com'
+    }
+
     explorers = {
         BSC: 'https://bscscan.com/',
         ETH: 'https://etherscan.io/',
@@ -126,34 +138,6 @@ class Chain:
     @classmethod
     def non_evm_ignore_tron_chains(cls):
         return [cls.POLKADOT, cls.SOLANA, cls.AVALANCHE_X, cls.AVALANCHE_P]
-
-
-class ChainsAnkr:
-    """Chain name for Ankr API"""
-    arbitrum = '0xa4b1'
-    avalanche = '0xa86a'
-    bsc = '0x38'
-    eth = '0x1'
-    fantom = '0xfa'
-    polygon = '0x89'
-    syscoin = '0x57'
-    optimism = '0xa'
-    tron = '0x2b6653dc'
-
-    reversed_mapping = {
-        bsc: 'bsc',
-        eth: 'eth',
-        fantom: 'fantom',
-        polygon: 'polygon',
-        avalanche: 'avalanche',
-        arbitrum: 'arbitrum',
-        optimism: 'optimism',
-        tron: 'tron'
-    }
-
-    @staticmethod
-    def get_chain_name(chain_id):
-        return ChainsAnkr.reversed_mapping.get(chain_id)
 
 
 class ProviderURI:
@@ -214,120 +198,5 @@ class ProviderURI:
     }
 
 
-class NativeTokens:
-    bnb = {
-        'id': 'binancecoin',
-        'type': 'token',
-        'name': 'BNB',
-        'symbol': 'BNB',
-        'imgUrl': 'https://firebasestorage.googleapis.com/v0/b/token-c515a.appspot.com/o/tokens_v2%2FBNB.png?alt=media&token=b0a77aea-6f98-4916-9dbf-ffdc9b44c2c3'
-    }
-    ether = {
-        'id': 'ethereum',
-        'type': 'token',
-        'name': 'Ether',
-        'symbol': 'ETH',
-        'imgUrl': 'https://firebasestorage.googleapis.com/v0/b/token-c515a.appspot.com/o/tokens_v2%2FETH.png?alt=media&token=55db834b-029b-4237-9b30-f5fd28d7b2f4'
-    }
-    ftm = {
-        'id': 'fantom',
-        'type': 'token',
-        'name': 'Fantom',
-        'symbol': 'FTM',
-        'imgUrl': 'https://firebasestorage.googleapis.com/v0/b/token-c515a.appspot.com/o/tokens_v2%2FFTM.png?alt=media&token=0fc3758c-9aa3-491b-904b-46fabb097447'
-    }
-    matic = {
-        'id': 'matic',
-        'type': 'token',
-        'name': 'Matic',
-        'symbol': 'MATIC',
-        'imgUrl': 'https://firebasestorage.googleapis.com/v0/b/token-c515a.appspot.com/o/tokens_v2%2FMATIC.png?alt=media&token=f3dd80ba-b045-40ba-9c8c-ee0d9617d798'
-    }
-    avax = {
-        'id': 'avalanche-2',
-        'type': 'token',
-        'name': 'Avalanche',
-        'symbol': 'AVAX',
-        'imgUrl': 'https://firebasestorage.googleapis.com/v0/b/token-c515a.appspot.com/o/tokens_v2%2FAVAX.png?alt=media&token=1e01b02f-0fb2-4887-b84d-837a4e2880dd'
-    }
-    tron = {
-        'id': 'tron',
-        'type': 'token',
-        'name': 'Tron',
-        'symbol': 'TRX',
-        'imgUrl': 'https://firebasestorage.googleapis.com/v0/b/token-c515a.appspot.com/o/tokens_v2%2FTRX.png?alt=media&token=85e1e5a3-26bc-433b-81dd-f2733c7ffe80'
-    }
-    cronos = {
-        'id': 'crypto-com-chain',
-        'type': 'token',
-        'name': 'Cronos',
-        'symbol': 'CRO',
-        'imgUrl': 'https://assets.coingecko.com/coins/images/7310/large/cro_token_logo.png'
-    }
-    solana = {
-        'id': 'solana',
-        'type': 'token',
-        'name': 'Solana',
-        'symbol': 'SOL',
-        'imgUrl': 'https://assets.coingecko.com/coins/images/4128/large/solana.png'
-    }
-    polkadot = {
-        'id': 'polkadot',
-        'type': 'token',
-        'name': 'Polkadot',
-        'symbol': 'DOT',
-        'imgUrl': 'https://assets.coingecko.com/coins/images/12171/large/polkadot.png'
-    }
-    mapping = {
-        Chain.ETH: ether,
-        Chain.BSC: bnb,
-        Chain.POLYGON: matic,
-        Chain.FTM: ftm,
-        Chain.ARBITRUM: ether,
-        Chain.OPTIMISM: ether,
-        Chain.AVALANCHE: avax,
-        Chain.TRON: tron,
-        Chain.CRONOS: cronos,
-        Chain.SOLANA: solana,
-        Chain.POLKADOT: polkadot
-    }
-
-
-class DefiServiceQuery:
-    token_balance = 'token_balance'
-    nft_balance = 'nft_balance'
-    deposit_borrow = 'deposit_borrow'
-    staking_reward = 'staking_reward'
-    protocol_reward = 'protocol_reward'
-    protocol_apy = 'protocol_apy'
-    dex_user_info = 'dex_user_info'
-    lp_token_list = 'lp_token_list'
-    farming_lp_token_list = 'farming_lp_token_list'
-    lp_token_info = 'lp_token_info'
-    token_pair_balance = 'token_pair_balance'
-    dex_user_nft = 'dex_user_nft'
-
-
-DEFAULT_CREDIT_SCORE = 300
-
-BNB = '0x0000000000000000000000000000000000000000'
-WBNB = '0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c'
-
-EMPTY_TOKEN_IMG = 'https://firebasestorage.googleapis.com/v0/b/token-c515a.appspot.com/o/tokens_v2%2Fempty-token.png?alt=media&token=2f9dfcc1-88a0-472c-a51f-4babc0c583f0'
-
-WRAPPED_NATIVE_TOKENS = {
-    Chain.BSC: '0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c',
-    Chain.ETH: '0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2',
-    Chain.FTM: '0x21be370d5312f44cb42ce377bc9b8a0cef1a4c83',
-    Chain.POLYGON: '0x0d500b1d8e8ef31e21c99d1db9a6444d3adf1270',
-    Chain.ARBITRUM: '0x82af49447d8a07e3bd95bd0d56f35241523fbab1',
-    Chain.OPTIMISM: '0x4200000000000000000000000000000000000006',
-    Chain.AVALANCHE: '0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7',
-    Chain.TRON: '0x891cdb91d149f23b1a45d9c5ca78a88d0cb44c18',
-    Chain.CRONOS: '0x5c7f8a570d578ed84e63fdfa7b1ee72deae1ae23'
-}
-
-COMMON_NOT_SUPPORTED = [Chain.AVALANCHE_X, Chain.AVALANCHE_P, Chain.SOLANA, Chain.POLKADOT, Chain.CRONOS]
-PROFILER_NOT_SUPPORTED = [Chain.AVALANCHE_X, Chain.AVALANCHE_P, Chain.SOLANA, Chain.POLKADOT, Chain.TRON, Chain.CRONOS]
-PROFILE_NOT_SUPPORTED = [Chain.AVALANCHE_X, Chain.AVALANCHE_P, Chain.SOLANA, Chain.POLKADOT, Chain.TRON]
-EVM_NOT_SUPPORTED = [Chain.AVALANCHE_X, Chain.AVALANCHE_P, Chain.SOLANA, Chain.POLKADOT]
+def BNB():
+    return None

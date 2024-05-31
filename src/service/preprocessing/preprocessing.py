@@ -120,7 +120,8 @@ class Preprocessing:
         return dict_doc
 
     def get_total_tokens_information(self, chain_id):
-        cursor = self.db.get_social_users_by_filter(filter_={"flag": {"$in": [0, 1, 3]}, 'chainId': chain_id}, projection=['newTokens'])
+        cursor = self.db.get_social_users_by_filter(filter_={"flag": {"$in": [0, 1, 3]}, 'chainId': chain_id},
+                                                    projection=['newTokens'])
         count_tokens = {}
         for doc in cursor:
             tokens = doc.get('newTokens', [])
@@ -163,7 +164,6 @@ class Preprocessing:
                     wallet[f'token_{chain_id}_{address_index}'] = 1
 
             write_flat_dict_to_csv(f'wallet_token_{chain_id}.csv', wallet)
-
 
     def merge_token_and_information(self, chain_id):
         wallets = read_csv_to_list_of_dicts(f'wallet_{chain_id}.csv')
@@ -213,4 +213,3 @@ class Preprocessing:
                     wallet.update(wallet_tokens)
 
             write_flat_dict_to_csv('train1.csv', wallet)
-

@@ -20,6 +20,7 @@ class MongoDB:
 
         self.social_users_col = self.mongo_db[MongoDBCollections.social_users]
         self.user_col = self.mongo_db[MongoDBCollections.users]
+        self.addresses_col = self.mongo_db[MongoDBCollections.addresses]
 
     @staticmethod
     def get_projection_statement(projection: list = None):
@@ -163,3 +164,18 @@ class MongoDB:
         cursor = self.user_col.find(filter_, projection)
 
         return cursor
+
+    def update_address(self, document):
+        try:
+            doc = {}
+            for k, v in document.items():
+                doc[str(k)] = v
+
+            self.addresses_col.update_one({'_id': doc.get('address')}, {"$set": doc}, upsert=True)
+        except Exception as e:
+            logger.exception(e)
+
+    def get_address(self, address):
+        doc = self.addresses_col.find_one({'_id': address})
+
+        return doc

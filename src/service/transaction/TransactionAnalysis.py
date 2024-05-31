@@ -1,9 +1,13 @@
+import asyncio
 import time
+
+import aiohttp
 
 from src.database.mongodb.mongodb import MongoDB
 from src.database.mongodb.etl_db import BlockchainETL
 from src.utils.logger_utils import get_logger
 from src.utils.file_utils import write_error_file
+from src.constants.network_constants import Chain
 from moralis import evm_api
 import requests
 
@@ -59,39 +63,6 @@ class TransactionsAnalysis:
             logger.info(f"Execute user {count} with id {c.get('_id')} on {chain_id}")
             count += 1
 
-    def get_min_max_gas_price_of_txs(self, chain_id='0x38'):
-        cursor = self._db.get_social_users_by_filter(projection=[chain_id])
-        res = {}
-        for doc in cursor:
-            txs = doc.get(chain_id)
-            list_hashes = []
-            for hash, value in txs.items():
-                list_hashes.append(hash)
-
-            tx_cursor = self.etl_db.get_transactions_by_hashes(chain_id=chain_id, hashes=list_hashes)
-
-            for tx in tx_cursor:
-                block_number = tx.get('block_number')
-                if block_number in res:
-                    continue
-                tx_in_block_number = self.etl_db.get_transactions_by_block(block_number=block_number, chain_id=chain_id)
-                min_gas = 9999999999999999999
-                max_gas = 0
-                logger.info(f"Execute block {block_number}")
-                for tx_in_block in tx_in_block_number:
-                    gas_tx = tx_in_block.get('gas_price')
-                    gas_tx = int(gas_tx)
-                    if gas_tx <= 0:
-                        continue
-                    if gas_tx < min_gas:
-                        min_gas = gas_tx
-                    if gas_tx > max_gas:
-                        max_gas = gas_tx
-
-                res[block_number] = {'min': min_gas, 'max': max_gas}
-
-            return res
-
     def get_transactions_by_api(self, cursor, start=0, end=0):
         count = start
         if end == 0 or end > len(cursor):
@@ -109,11 +80,12 @@ class TransactionsAnalysis:
                 response = requests.get(url)
                 data = dict(response.json())
                 transactions = data.get('result')
-                user = {'0x1': {}, '_id': '0x1_' + address, 'chainId': '0x1', 'regional': doc.get('regional'), 'address': address}
+                user = {'0x1': {}, '_id': '0x1_' + address, 'chainId': '0x1', 'regional': doc.get('regional'),
+                        'address': address}
                 for tx in transactions:
                     if tx.get('from') == address:
                         user['0x1'][tx.get('hash')] = {'timestamp': tx.get('timeStamp'), 'value': tx.get('value', 0),
-                                                        'gas': tx.get('gas', 0), 'gas_price': doc.get('gasPrice', 0)}
+                                                       'gas': tx.get('gas', 0), 'gas_price': doc.get('gasPrice', 0)}
 
                 self._db.update_social_user(user)
                 print(user)
@@ -247,3 +219,105 @@ class TransactionsAnalysis:
             write_error_file('polygon1.txt', key)
             return []
 
+    def get_info_all_chain_of_address(self, address):
+        results = asyncio.run(self.get_tx_each_chain_of_address(address))
+        results['0x1_token'] = []
+        urls = {'0x1': f"https://api.chainbase.online/v1/account/tokens?chain_id=1&address={address}&limit=100&page=1"}
+        if len(results.get('0x89_token', [])) == 100:
+            urls['0x89'] = f"https://api.chainbase.online/v1/account/tokens?chain_id=137&address={address}&limit=100&page=2"
+        if len(results.get('0x38_token', [])) == 100:
+            urls['0x38'] = f"https://api.chainbase.online/v1/account/tokens?chain_id=56&address={address}&limit=100&page=2"
+
+        headers = {
+            "accept": "application/json",
+            "x-api-key": "2g5g889KGLeY7I3k8lSqQ98Aq5l"
+        }
+        copy_urls = urls.copy()
+        while copy_urls:
+            for chain_id, url in urls.items():
+                response = requests.get(url, headers=headers)
+                res = response.json()
+                if res.get('message') == "ok":
+                    data = res.get('data')
+                    copy_urls.pop(chain_id)
+                    if len(data) == 100:
+                        index = url.rfind('=')
+                        page = int(url[index+1:]) + 1
+                        url = url[:index+1] + str(page)
+                        copy_urls[chain_id] = url
+                    results[f'{chain_id}_token'] += data
+                else:
+                    copy_urls.pop(chain_id)
+
+            urls = copy_urls.copy()
+
+        return results
+
+    async def fetch(self, session, url):
+        if 'chainbase' in url:
+            chain_id = ''
+            if 'chain_id=137' in url:
+                chain_id = Chain.POLYGON
+            elif 'chain_id=1' in url:
+                chain_id = Chain.ETH
+            elif 'chain_id=56' in url:
+                chain_id = Chain.BSC
+            headers = {
+                "accept": "application/json",
+                "x-api-key": "2g5g889KGLeY7I3k8lSqQ98Aq5l"
+            }
+            async with session.get(url, headers=headers) as response:
+                res = await response.json()
+                data = []
+                if res.get('message') == "ok":
+                    data = res.get('data')
+                    print(f"{chain_id} {len(data)}")
+
+                return {f'{chain_id}_token': data}
+        else:
+            async with session.get(url) as response:
+                data = await response.json()
+                chain_id = ''
+                if 'etherscan' in url:
+                    chain_id = Chain.ETH
+                elif 'bscscan' in url:
+                    chain_id = Chain.BSC
+                elif 'polygon' in url:
+                    chain_id = Chain.POLYGON
+
+                results = data.get('result')
+                if isinstance(results, str):
+                    results = int(results) / 10 ** 18
+                    results = results * Chain.token_price.get(chain_id)
+                    return {f'{chain_id}_balance': results}
+                res = []
+                for result in results:
+                    res.append({'time_stamp': result.get('timeStamp'),
+                                'hash': result.get('hash'),
+                                'from': result.get('from'),
+                                'to': result.get('to'),
+                                'value': result.get('value')})
+
+                return {f"{chain_id}_tx": res}
+
+    async def get_tx_each_chain_of_address(self, address):
+        urls = [
+            f"https://api.chainbase.online/v1/account/tokens?chain_id=137&address={address}&limit=100&page=1",
+            f"https://api.etherscan.io/api?module=account&action=txlist&address={address}&startblock=0&endblock=99999999&page=1&offset=10000&sort=asc&apikey={Chain.api_key.get(Chain.ETH)}",
+            f"https://api.bscscan.com/api?module=account&action=txlist&address={address}&startblock=0&endblock=99999999&page=1&offset=10000&sort=asc&apikey={Chain.api_key.get(Chain.BSC)}",
+            f"https://api.polygonscan.com/api?module=account&action=txlist&address={address}&startblock=0&endblock=99999999&page=1&offset=10000&sort=asc&apikey={Chain.api_key.get(Chain.POLYGON)}",
+            # f"https://api.etherscan.io/api?module=block&action=getblocknobytime&timestamp=1578638524&closest=before&apikey={Chain.api_key.get(Chain.ETH)}",
+            f"https://api.chainbase.online/v1/account/tokens?chain_id=56&address={address}&limit=100&page=1",
+
+        ]
+        async with aiohttp.ClientSession() as session:
+            tasks = []
+            for url in urls:
+                print(url)
+                tasks.append(self.fetch(session, url))
+            all_response = await asyncio.gather(*tasks)
+            res = {}
+            for response in all_response:
+                res.update(response)
+
+            return res

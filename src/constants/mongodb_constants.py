@@ -1,7 +1,7 @@
 class MongoDBCollections:
     social_users = 'socialUsers'
     users = 'users'
-
+    addresses = 'addresses'
 
 class MongoEventsCollections:
     CONFIGS = 'configs'
