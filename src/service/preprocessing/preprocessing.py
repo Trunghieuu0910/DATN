@@ -213,3 +213,18 @@ class Preprocessing:
                     wallet.update(wallet_tokens)
 
             write_flat_dict_to_csv('train1.csv', wallet)
+
+    def get_back_test_data(self):
+        res = {}
+
+        list_wallets = open_json_file_to_dict('/home/hieunguyen/solution/cdp_database.wallets_v2.json')
+
+        for wallet in list_wallets:
+            address = wallet.get('address')
+            address = address.replace('`', '')
+            cursor = self.db.get_social_users_by_address(address=address, projection=['_id'], flag=False)
+
+            if not cursor:
+                res[address] = wallet.get('country')
+
+        write_json_file('backtest.json', res)

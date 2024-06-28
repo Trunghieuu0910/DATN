@@ -74,6 +74,8 @@ class Chain:
         POLYGON: 0.68
     }
 
+    country = ['africa', 'america', 'europe', 'jp_kr_cn', 'southeast_asia', 'southern_asia']
+
     api_key = {
         BSC: os.getenv('BSC_API_KEY'),
         ETH: os.getenv('ETH_API_KEY'),

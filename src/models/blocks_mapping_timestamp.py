@@ -1,14 +1,12 @@
 import time
 
-import redis
 from web3 import Web3, HTTPProvider
 from web3.middleware import geth_poa_middleware
 
 from src.constants.network_constants import ProviderURI
 from src.constants.time_constants import TimeConstants
 from src.decorators.time_exe import sync_log_time_exe, TimeExeTag
-from src.services.blockchain.eth.eth_services import EthService
-from src.services.cached.constants import CachedKeys
+from src.service.blockchain.eth.eth_services import EthService
 from src.utils.logger_utils import get_logger
 from src.utils.singleton import SingletonMeta
 

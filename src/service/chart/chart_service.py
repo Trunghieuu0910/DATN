@@ -1,3 +1,4 @@
+from src.constants.network_constants import Chain
 from src.database.mongodb.mongodb import MongoDB
 from src.constants.country_regional_constants import CountryConstant
 from src.service.country.analysis_service import AnalysisService
@@ -95,7 +96,10 @@ class ChartService:
         plt.show()
 
     def time_tx_in_regional(self, regional, limit=10000):
-        cursor = self._db.get_social_users_by_regional(regional=regional, projection=['regional', '0x1', '0x89', '0x38', 'chainId'])
+        if isinstance(regional, list):
+            cursor = self._db.get_social_users_by_regionals(regionals=regional, projection=['regional', '0x1', '0x89', '0x38', 'chainId'])
+        else:
+            cursor = self._db.get_social_users_by_regional(regional=regional, projection=['regional', '0x1', '0x89', '0x38', 'chainId'])
         res = {}
         test = {}
         ccount = 0
@@ -122,10 +126,16 @@ class ChartService:
             if c.get('_id') in test:
                 test[c.get('_id')] = test[c.get('_id')] / len(txs)
 
+        if regional == 'jp_kr_cn':
+            regional = 'east_asia'
+        elif 'south_america' in regional:
+            regional = 'america'
+
+        plt.gcf().set_size_inches(640 / 100, 480 / 100)  # 1 inch = 100 pixels
         plt.bar(res.keys(), res.values())
-        plt.xlabel('Keys')
-        plt.ylabel('Values')
-        plt.title(f'Time Transactions {regional}')
+        plt.xlabel('Hour')
+        plt.ylabel('Number Transactions')
+        plt.title(f'Histogram of Time Transactions in {regional.replace("_", " ").title()}')
 
         # test = dict(sorted(test.items(), key=lambda x: x[1], reverse=False))
         # for k, v in test.items():
@@ -139,7 +149,7 @@ class ChartService:
         plt.show()
 
     def week_tx_in_regional(self, regional, chain_id='0x38', limit=10000):
-        cursor = self._db.get_social_users_by_regional(regional=regional, projection=['regional', chain_id])
+        cursor = self._db.get_social_users_by_regional(regional=regional, chain_id=chain_id, projection=['regional', chain_id])
         res = {}
 
         for c in cursor:
@@ -150,18 +160,24 @@ class ChartService:
                     break
 
                 timestamp = v.get('timestamp')
-                weekday = map_epoch_time_to_day(timestamp)
+                weekday = map_epoch_time_to_day(int(timestamp))
                 if weekday not in res:
                     res[weekday] = 1
                 else:
                     res[weekday] += 1
                 count += 1
 
-        plt.bar(res.keys(), res.values())
-        plt.xlabel('Keys')
-        plt.ylabel('Values')
-        plt.title(f'Weekdays Transactions {regional}')
+        new_res = {}
+        list_keys = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+        for key in list_keys:
+            new_res[key] = res.get(key)
 
+        plt.bar(new_res.keys(), new_res.values())
+        plt.xlabel('')
+        plt.ylabel('')
+        plt.title('')
+
+        plt.xticks(fontsize=16)
         plt.show()
 
     def timezone_in_regional(self, regional):
@@ -184,16 +200,34 @@ class ChartService:
 
     def transaction_value_of_regional(self, regionals=None, chain_id='0x38'):
         if not regionals:
-            regionals = self.regional.get_all_regional()
+            regionals = ['europe', 'northern_america', 'south_america', 'jp_kr_cn', 'africa', 'southeast_asia', 'southern_asia']
+            print(regionals)
 
         res = {}
         for regional in regionals:
-            value_tx = self.analysis_service.value_tx_of_users(regional=regional, chain_id=chain_id)
-            median = []
-            for v in value_tx.values():
-                median.append(v.get('median'))
+            cursor = self._db.get_social_users_by_regional(regional=regional, projection=['regional', '0x1', '0x89', '0x38', 'chainId'])
+            mean = []
+            for doc in cursor:
+                chain_id = doc.get('chainId')
+                txs = doc.get(chain_id, {})
+                total_ne_0 = 0
+                value_ne_0 = 0
+                for hash, value in txs.items():
+                    if int(value.get('value')) != 0:
+                        value_ne_0 += int(value.get('value')) / 10 ** 18 * Chain.token_price.get(chain_id)
+                        total_ne_0 += 1
 
-            res[regional] = median
+                if value_ne_0 != 0:
+                    value_ne_0 = value_ne_0/ total_ne_0
+                    mean.append(value_ne_0)
+
+            if regional in ['south_america', 'northern_america']:
+                regional = 'america'
+            if regional not in res:
+                res[regional] = mean
+            else:
+                res[regional] += mean
+
 
         data = {}
         for k, v in res.items():
@@ -259,20 +293,6 @@ class ChartService:
         plt.xticks(rotation=90)
         plt.ylabel('Value')
         plt.grid(True)
-        plt.show()
-
-    def token_of_regional(self, regional, chain_id='0x38', top=10, ignore=True):
-        res = self.analysis_service.token_hold_of_users(regional=regional, chain_id=chain_id, ignore=ignore)
-
-        top_items = sorted(res.items(), key=lambda x: x[1], reverse=True)[:top]
-
-        keys = [item[0] for item in top_items]
-        values = [item[1] for item in top_items]
-
-        plt.figure(figsize=(8, 8))
-        plt.pie(values, labels=keys, autopct='%1.1f%%', startangle=140)
-        plt.axis('equal')  # Đảm bảo biểu đồ tròn
-        plt.title(f'Top {top} Token of {regional}')
         plt.show()
 
     def top_time_zone(self):

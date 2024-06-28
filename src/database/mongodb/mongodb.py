@@ -89,10 +89,11 @@ class MongoDB:
 
         return cursor
 
-    def get_social_users_by_regional(self, regional, projection=None):
+    def get_social_users_by_regional(self, regional, chain_id=None, projection=None):
         projection = self.get_projection_statement(projection)
-        filter_ = {'regional': regional, 'flag': {"$in": [0, 1]} }
-
+        filter_ = {'regional': regional, 'flag': {"$in": [0, 1, 2, 3]}}
+        if chain_id:
+            filter_.update({'chainId': chain_id})
         cursor = self.social_users_col.find(filter=filter_, projection=projection)
 
         return cursor
@@ -119,10 +120,12 @@ class MongoDB:
 
         return cursor
 
-    def get_social_users_by_ids(self, ids, projection=None):
+    def get_social_users_by_ids(self, ids, projection=None, flag=True):
         projection = self.get_projection_statement(projection=projection)
-        filter_ = {'_id': {"$in": ids}}
-
+        if flag:
+            filter_ = {'_id': {"$in": ids}, 'flag': {"$in": [0, 1, 2, 3]}}
+        else:
+            filter_ = {'_id': {"$in": ids}}
         cursor = self.social_users_col.find(filter=filter_, projection=projection)
 
         return cursor
@@ -130,7 +133,7 @@ class MongoDB:
     def get_social_users_by_regionals(self, regionals, projection=None):
         projection = self.get_projection_statement(projection)
 
-        filter_ = {"regional": {"$in": regionals}}
+        filter_ = {"regional": {"$in": regionals}, 'flag': {"$in": [0, 1, 2, 3]}}
 
         cursor = self.social_users_col.find(filter=filter_, projection=projection)
 
@@ -175,7 +178,31 @@ class MongoDB:
         except Exception as e:
             logger.exception(e)
 
-    def get_address(self, address):
-        doc = self.addresses_col.find_one({'_id': address})
+    def get_address(self, address, projection=None):
+        projection = self.get_projection_statement(projection)
+        doc = self.addresses_col.find_one({'_id': address}, projection)
 
         return doc
+
+    def get_addresses(self, addresses, projection=None):
+        projection = self.get_projection_statement(projection)
+        cursor = self.addresses_col.find({"_id": {"$in": addresses}}, projection)
+
+        return list(cursor)
+
+    def get_social_users_by_address(self, address, projection=None, flag=True):
+        projection = self.get_projection_statement(projection=projection)
+        res = []
+        ids = [f'0x1_{address}', f'0x89_{address}', address]
+        cursor = self.get_social_users_by_ids(ids=ids, projection=projection, flag=flag)
+
+        for doc in cursor:
+            res.append(doc)
+
+        filter_ = {"addresses.ethereum": address, 'flag': {"$in": [0, 1, 2, 3]}}
+        cursor = self.get_social_users_by_filter(filter_, projection)
+        if cursor:
+            for doc in cursor:
+                res.append(doc)
+
+        return res

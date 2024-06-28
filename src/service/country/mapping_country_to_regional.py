@@ -58,7 +58,7 @@ class MappingCountryToRegional:
         for doc in cursor:
             reg = doc.get('regional')
             if reg in ['japan_korea', 'china', 'japan', 'south_korea']:
-                doc['regional'] = 'jp_kr_cn'
+                doc['regional'] = 'east_asia'
             elif reg in ['northern_europe', 'southern_europe', 'western_europe', 'eastern_europe', 'russia']:
                 doc['regional'] = 'europe'
             elif reg in ['indochina', 'malay']:
@@ -66,11 +66,11 @@ class MappingCountryToRegional:
             elif reg in ['western_africa']:
                 doc['regional'] = 'africa'
             elif reg in ['caribbean_and_central_america']:
-                doc['regional'] = 'south_america'
+                doc['regional'] = 'america'
             elif reg in ['india']:
                 doc['regional'] = 'southern_asia'
             elif reg in ['canada', 'united_states']:
-                doc['regional'] = 'northern_america'
+                doc['regional'] = 'america'
 
             print(doc)
             self.db.update_social_user(doc)

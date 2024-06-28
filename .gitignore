@@ -72,3 +72,4 @@ test/
 # Jupyter Notebook
 .ipynb_checkpoints
 test*
+artifact

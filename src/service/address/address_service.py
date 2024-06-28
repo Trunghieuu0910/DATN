@@ -1,24 +1,18 @@
-import aiohttp
-import asyncio
 import pandas as pd
 
 from src.constants.network_constants import Chain
-from src.service.transaction.TransactionAnalysis import TransactionsAnalysis
-from src.database.mongodb.mongodb import MongoDB
 from src.service.crawler.crawl_scan import ScanCrawler
 from src.utils.file_utils import open_json_file_to_dict
 
 
 class AddressService:
     def __init__(self):
-        self.db = MongoDB()
-        self.tx_ana = TransactionsAnalysis()
+        # self.db = MongoDB()
+        # self.tx_ana = TransactionsAnalysis()
         self.scan_crawler = ScanCrawler()
         self.used_token = open_json_file_to_dict('index.json')
 
-    def get_information_of_address(self, address):
-        information = self.tx_ana.get_info_all_chain_of_address(address)
-
+    def get_information_of_address(self, information, address):
         chain_ids = []
         tx_0x38 = information.get('0x38_tx')
         tx_0x1 = information.get('0x1_tx')
@@ -34,6 +28,7 @@ class AddressService:
         value_ne_0 = 0
         total_tx_ne_0 = 0
         mean = 0
+        means = []
 
         tx = {'0x1': tx_0x1, '0x38': tx_0x38, '0x89': tx_0x89}
         for chain_id, txs in tx.items():
@@ -46,11 +41,12 @@ class AddressService:
                 value_tx = int(tx.get('value')) / 10 ** 18 * Chain.token_price.get(chain_id)
 
                 if value_tx != 0:
+                    means.append(value_tx)
                     value_ne_0 += value_tx
                     total_tx_ne_0 += 1
 
         if total_tx < 20:
-            return None
+            return None, None
 
         if value_ne_0 > 0:
             mean = value_ne_0 / total_tx_ne_0
@@ -68,14 +64,15 @@ class AddressService:
                 hour_dict[i] = 0
 
         hour_dict = dict(sorted(hour_dict.items(), key=lambda x: x[0]))
-        res = {'address': address, 'total_tx': total_tx, 'balance': total_balance, 'mean': mean}
+        res = {'address': address, 'total_tx': total_tx, 'balance': total_balance, 'mean': mean, 'means': means}
         res.update(hour_dict)
-        self.db.update_address(res)
-        # token = self.token_information_of_wallets(information)
+        # self.db.update_address(res)
+        token = self.token_information_of_wallets(information)
+        return res, token
 
     def token_information_of_wallets(self, information):
         all_tokens = {'0x38': information.get('0x38_token', []), '0x1': information.get('0x1_token'),
-                      '0x89': information.get('0x89_token')}
+                      '0x89': information.get('0x89_token', [])}
         res = {}
         for index in self.used_token.values():
             res[index] = 0
@@ -85,5 +82,4 @@ class AddressService:
                 if key in self.used_token:
                     res[self.used_token[key]] = 1
 
-        print(res)
         return res

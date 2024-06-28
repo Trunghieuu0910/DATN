@@ -17,9 +17,9 @@ logger = get_logger('Transaction Analysis')
 class TransactionsAnalysis:
     def __init__(self, api_key="UXDJAIUUK1SUNGCDTFC2Q9MCYU95JQHTGS"):
         self.bnb_price = 600
-        self.api_key = api_key
-        self._db = MongoDB()
-        self.etl_db = BlockchainETL()
+        # self.api_key = api_key
+        # self._db = MongoDB()
+        # self.etl_db = BlockchainETL()
 
     def count_tx_by_addresses(self, chain_id):
         sum = 0
@@ -219,10 +219,14 @@ class TransactionsAnalysis:
             write_error_file('polygon1.txt', key)
             return []
 
-    def get_info_all_chain_of_address(self, address):
-        results = asyncio.run(self.get_tx_each_chain_of_address(address))
+    def get_info_all_chain_of_address(self, results, address):
+        logger.info("Execute crawl token")
         results['0x1_token'] = []
         urls = {'0x1': f"https://api.chainbase.online/v1/account/tokens?chain_id=1&address={address}&limit=100&page=1"}
+        if not results.get('0x89_token'):
+            results['0x89_token'] = []
+        if not results.get('0x38_token'):
+            results['0x38_token'] = []
         if len(results.get('0x89_token', [])) == 100:
             urls['0x89'] = f"https://api.chainbase.online/v1/account/tokens?chain_id=137&address={address}&limit=100&page=2"
         if len(results.get('0x38_token', [])) == 100:
@@ -238,7 +242,9 @@ class TransactionsAnalysis:
                 response = requests.get(url, headers=headers)
                 res = response.json()
                 if res.get('message') == "ok":
-                    data = res.get('data')
+                    data = res.get('data', [])
+                    if not data:
+                        data = []
                     copy_urls.pop(chain_id)
                     if len(data) == 100:
                         index = url.rfind('=')
@@ -267,12 +273,15 @@ class TransactionsAnalysis:
                 "x-api-key": "2g5g889KGLeY7I3k8lSqQ98Aq5l"
             }
             async with session.get(url, headers=headers) as response:
-                res = await response.json()
+                if response.status == 200:
+                    res = await response.json()
+                else:
+                    res = {}
                 data = []
                 if res.get('message') == "ok":
                     data = res.get('data')
-                    print(f"{chain_id} {len(data)}")
-
+                    if not data:
+                        data = []
                 return {f'{chain_id}_token': data}
         else:
             async with session.get(url) as response:
@@ -301,19 +310,18 @@ class TransactionsAnalysis:
                 return {f"{chain_id}_tx": res}
 
     async def get_tx_each_chain_of_address(self, address):
+        logger.info("Execute crawl Transactions")
         urls = [
             f"https://api.chainbase.online/v1/account/tokens?chain_id=137&address={address}&limit=100&page=1",
             f"https://api.etherscan.io/api?module=account&action=txlist&address={address}&startblock=0&endblock=99999999&page=1&offset=10000&sort=asc&apikey={Chain.api_key.get(Chain.ETH)}",
             f"https://api.bscscan.com/api?module=account&action=txlist&address={address}&startblock=0&endblock=99999999&page=1&offset=10000&sort=asc&apikey={Chain.api_key.get(Chain.BSC)}",
             f"https://api.polygonscan.com/api?module=account&action=txlist&address={address}&startblock=0&endblock=99999999&page=1&offset=10000&sort=asc&apikey={Chain.api_key.get(Chain.POLYGON)}",
-            # f"https://api.etherscan.io/api?module=block&action=getblocknobytime&timestamp=1578638524&closest=before&apikey={Chain.api_key.get(Chain.ETH)}",
             f"https://api.chainbase.online/v1/account/tokens?chain_id=56&address={address}&limit=100&page=1",
 
         ]
         async with aiohttp.ClientSession() as session:
             tasks = []
             for url in urls:
-                print(url)
                 tasks.append(self.fetch(session, url))
             all_response = await asyncio.gather(*tasks)
             res = {}
