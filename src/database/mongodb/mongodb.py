@@ -21,7 +21,7 @@ class MongoDB:
         self.social_users_col = self.mongo_db[MongoDBCollections.social_users]
         self.user_col = self.mongo_db[MongoDBCollections.users]
         self.addresses_col = self.mongo_db[MongoDBCollections.addresses]
-
+        self.wallets_col = self.mongo_db[MongoDBCollections.wallets]
     @staticmethod
     def get_projection_statement(projection: list = None):
         if projection is None:
@@ -206,3 +206,20 @@ class MongoDB:
                 res.append(doc)
 
         return res
+
+    def update_wallet(self, wallet):
+        try:
+            self.wallets_col.update_one({"_id": wallet.get("_id")}, {"$set": wallet}, upsert=True)
+        except Exception as e:
+            logger.exception(e)
+
+    def get_wallets_by_filter(self, filter_=None, projection=None, skip=None):
+        projection = self.get_projection_statement(projection)
+        if not filter_:
+            filter_ = {}
+        if skip:
+            cursor = self.wallets_col.find(filter=filter_, projection=projection).skip(skip)
+        else:
+            cursor = self.wallets_col.find(filter=filter_, projection=projection)
+
+        return cursor
