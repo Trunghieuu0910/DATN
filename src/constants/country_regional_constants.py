@@ -56,6 +56,11 @@ class CountryConstant:
 
         self.russia = {'russia': ['Russia']}
 
+        self.europe = {
+            'europe': self.northern_europe.get('northern_europe')  + self.eastern_europe.get('eastern_europe')
+                    + self.western_europe.get('western_europe') + self.southern_europe.get('southern_europe') + self.russia.get('russia')
+        }
+
         # OCEANIA
         self.oceania = {'oceania': ['Australia',
                                     'New Zealand',
@@ -86,6 +91,10 @@ class CountryConstant:
         self.china = {'china': ['China', 'Taiwan', 'Mongolia', 'Hong Kong']}
         self.japan = {'japan': ['Japan']}
         self.south_korea = {'south_korea': ['South Korea']}
+
+        self.east_asia = {
+            'east_asia': self.china.get('china') + self.japan.get('japan') + self.south_korea.get('south_korea')
+        }
         self.india = {'india': ['India']}
 
         self.southern_asia = {'southern_asia': ['Afghanistan',
@@ -97,6 +106,7 @@ class CountryConstant:
                                                 'Pakistan',
                                                 'Sri Lanka']}
 
+
         self.central_asia = {"central_asia": [
             'Tajikistan',
             'Turkmenistan',
@@ -104,6 +114,11 @@ class CountryConstant:
             'Kyrgyzstan',
             'Kazakhstan',
         ]}
+
+
+        self.south_asia = {
+            'south_asia': self.india.get('india') + self.southern_asia.get('southern_asia') + self.central_asia.get('central_asia')
+        }
 
         self.indochina = {'indochina': [
             'Vietnam',
@@ -121,6 +136,10 @@ class CountryConstant:
             'Timor-Leste',
             'Philippines'
         ]}
+
+        self.southeast_asia = {
+            'southeast_asia': self.indochina.get('indochina') + self.malay.get('malay')
+        }
 
         self.western_asia = {'western_asia': [
             'Armenia',
@@ -144,6 +163,8 @@ class CountryConstant:
             'United Arab Emirates',
             'Yemen',
         ]}
+
+
         # AFRICA
         self.eastern_africa = {'eastern_africa': ['Burundi',
                                                   'Comoros',
@@ -216,6 +237,13 @@ class CountryConstant:
             'Eswatini'
         ]}
 
+        self.africa = {
+            'africa': self.eastern_africa.get('eastern_africa')
+                      + self.middle_africa.get('middle_africa')
+                      + self.southern_africa.get('southern_africa')
+                      + self.northern_africa.get('northern_africa')
+        }
+
         # AMERICA
         self.united_states = {'united_states': ['United States']}
         self.canada = {'canada': ['Canada']}
@@ -278,27 +306,17 @@ class CountryConstant:
             'Falkland Islands'
         ]}
 
-        # Merge
-        self.caribbean_and_central_america = {
-            'caribbean_and_central_america':
-                self.caribbean.get('caribbean')
-                + self.central_america.get('central_america')
+        self.america = {
+            'america': self.central_america.get('central_america') + self.caribbean.get('caribbean')
+                        + self.south_america.get('south_america') + self.united_states.get('united_states') + self.canada.get('canada')
         }
 
-        self.africa = {
-            'africa': self.eastern_africa.get('eastern_africa')
-                      + self.middle_africa.get('middle_africa')
-                      + self.southern_africa.get('southern_africa')
-                      + self.northern_africa.get('northern_africa')
-        }
+
+
+
 
         # ALl
-        self.regionals = [self.canada, self.central_asia, self.china, self.caribbean_and_central_america,
-                          self.eastern_europe, self.india, self.indochina, self.japan,
-                          self.malay, self.northern_europe, self.russia,
-                          self.oceania, self.south_america, self.south_korea, self.africa,
-                          self.southern_asia, self.southern_europe, self.united_states, self.western_asia,
-                          self.western_africa, self.western_europe]
+        self.regionals = [self.europe, self.africa, self.america, self.south_asia, self.east_asia, self.southeast_asia]
 
     def get_regional(self, regional):
         return self.__getattribute__(regional)

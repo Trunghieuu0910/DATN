@@ -1,11 +1,11 @@
-from geopy.geocoders import Nominatim
-import requests
 import ast
+
+from bs4 import BeautifulSoup
+from geopy.geocoders import Nominatim
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service as ChromeService
 from webdriver_manager.chrome import ChromeDriverManager
-from bs4 import BeautifulSoup
 
 from src.utils.file_utils import write_error_file
 from src.utils.logger_utils import get_logger
@@ -47,6 +47,7 @@ def get_country_from_city_v2(city_name):
         logger.exception(e)
         error_path = '/home/hieunguyen/DHBK/DATN/artifact/error_city.txt'
         write_error_file(error_path, city_name)
+
 
 def get_driver():
     chrome_options = Options()

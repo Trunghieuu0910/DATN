@@ -121,7 +121,8 @@ async def get_addresses_location(request: Request):
         infor = tx_anan.get_info_all_chain_of_address(infor, address)
         infor, token = address_service.get_information_of_address(infor, address)
         if infor is None:
-            raise BadRequest(f'Address {address} is not enough information to predict')
+            logger.exception(f'Address {address} is not enough information to predict')
+            continue
         update_infor = infor.copy()
         update_infor['transactions'] = {}
         for i in range(24):

@@ -17,5 +17,5 @@ delete_list = ['Defi', "Heaven", "Etherium", "The Metaverse Store", "Black Hole"
                'Building', 'The Boredroom', 'Ask me:)', 'CHN', 'Cyber World', 'Ministry of Decentralization and Territorial Administration',
                'Cyber', 'XYZ', 'Checkmate', 'Bar', 'NewYork', 'Node', 'Empty', 'Bananaville',
                'Not Worthy of a Name Lookout', 'Garage', 'Jungle', 'Kalifonia', 'COMING SOON', 'In Time',
-               'Ibb Governorate', 'KFC', '9999', 'Sushi Goooo', 'West', 'Centre Department', 'Blue', 'Degens',
-               'Only God', ]
+               'Ibb Governorate', 'KFC', '9999', 'Sushi Goooo', 'Centre Department', 'Blue', 'Degens',
+               'Only God', 'heart', 'Web3', 'Polygon', 'Decentralization', 'Dog']

@@ -77,12 +77,7 @@ class BlockchainETLConfig:
 
     BNB_DATABASE = os.environ.get("BNB_DATABASE") or "blockchain_etl"
     ETHEREUM_DATABASE = os.environ.get("ETHEREUM_DATABASE") or "ethereum_blockchain_etl"
-    FANTOM_DATABASE = os.environ.get("FANTOM_DATABASE") or "ftm_blockchain_etl"
     POLYGON_DATABASE = os.environ.get("POLYGON_DATABASE") or "polygon_blockchain_etl"
-    ARBITRUM_DATABASE = os.environ.get("ARBITRUM_DATABASE") or "arbitrum_blockchain_etl"
-    OPTIMISM_DATABASE = os.environ.get("OPTIMISM_DATABASE") or "optimism_blockchain_etl"
-    AVALANCHE_DATABASE = os.environ.get("AVALANCHE_DATABASE") or "avalanche_blockchain_etl"
-    TRON_DATABASE = os.environ.get("TRON_DATABASE") or "tron_blockchain_etl"
 
 
 class MongoDBKLGConfig:

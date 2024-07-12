@@ -1,18 +1,15 @@
 import sys
-from typing import List, Optional
+from typing import List
 
 import pymongo
 from pymongo import MongoClient
-import time
-from src.constants.mongodb_constants import MongoEventsCollections
-from src.constants.network_constants import Chain, BNB
-from src.constants.mongodb_events_constants import TxConstants, BlockConstants
-from src.decorators.time_exe import sync_log_time_exe, TimeExeTag
-from src.models.blocks_mapping_timestamp import Blocks
-from src.utils.logger_utils import get_logger
+
 from config import BlockchainETLConfig
-from src.utils.time_utils import round_timestamp
-from src.constants.time_constants import TimeConstants
+from src.constants.mongodb_constants import MongoEventsCollections
+from src.constants.mongodb_events_constants import TxConstants, BlockConstants
+from src.constants.network_constants import Chain
+from src.decorators.time_exe import sync_log_time_exe, TimeExeTag
+from src.utils.logger_utils import get_logger
 
 logger = get_logger('Blockchain ETL')
 
