@@ -169,7 +169,7 @@ async def get_transaction_of_address(request: Request):
     for doc in cursor:
         regional = doc.get('regional')
         if regional not in regionals:
-            regionals[regional] = {'transactions': {}, 'means': []}
+            regionals[regional] = {'transactions': {}, 'means': [], 'balance': [], 'total_tx': []}
         transactions = doc.get('transactions')
         print(f"{doc.get('_id')} {transactions}")
         for time, value in transactions.items():
@@ -180,6 +180,17 @@ async def get_transaction_of_address(request: Request):
 
         means = doc.get('means', [])
         regionals[regional]['means'] += means
+        balance = doc.get('balance', 0)
+        regionals[regional]['balance'] += [balance]
+        total_tx = doc.get('total_tx', 0)
+        regionals[regional]['total_tx'] += [total_tx]
+
+    for k, v in regionals.items():
+        balance = v.get('balance', [])
+        v['balance'] = sum(balance) / len(balance)
+        total_tx = v.get('total_tx', [])
+        v['total_tx'] = sum(total_tx) / len(total_tx)
+
 
     return json(regionals)
 

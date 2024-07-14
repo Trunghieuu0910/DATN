@@ -21,6 +21,7 @@ class CountryConstant:
                                                   "Hungary",
                                                   "Moldova",
                                                   "Poland",
+                                                  'Turkey',
                                                   "Romania",
                                                   "Russia",
                                                   "Slovakia",
@@ -168,6 +169,7 @@ class CountryConstant:
         # AFRICA
         self.eastern_africa = {'eastern_africa': ['Burundi',
                                                   'Comoros',
+                                                  'Nigeria',
                                                   'Djibouti',
                                                   'Eritrea',
                                                   'Ethiopia',
@@ -320,6 +322,16 @@ class CountryConstant:
 
     def get_regional(self, regional):
         return self.__getattribute__(regional)
+
+    def get_regional_of_country(self, country):
+        for regional in self.regionals:
+            countries = list(regional.values())[0]
+            regional_name = list(regional.keys())[0]
+
+            if country in countries:
+                return regional_name
+
+        return None
 
     def get_all_regional(self):
         res = []

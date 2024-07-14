@@ -29,30 +29,15 @@ class BlockchainETL:
 
         self.bnb_db = self.client[BlockchainETLConfig.BNB_DATABASE]
         self.ethereum_db = self.client[BlockchainETLConfig.ETHEREUM_DATABASE]
-        self.fantom_db = self.client[BlockchainETLConfig.FANTOM_DATABASE]
         self.polygon_db = self.client[BlockchainETLConfig.POLYGON_DATABASE]
-        self.arbitrum_db = self.client[BlockchainETLConfig.ARBITRUM_DATABASE]
-        self.optimism_db = self.client[BlockchainETLConfig.OPTIMISM_DATABASE]
-        self.avalanche_db = self.client[BlockchainETLConfig.AVALANCHE_DATABASE]
-        self.tron_db = self.client[BlockchainETLConfig.TRON_DATABASE]
 
     def _get_collection(self, chain_id, collection_name=MongoEventsCollections.TRANSACTIONS):
         if chain_id == Chain.BSC:
             collection = self.bnb_db[collection_name]
         elif chain_id == Chain.ETH:
             collection = self.ethereum_db[collection_name]
-        elif chain_id == Chain.FTM:
-            collection = self.fantom_db[collection_name]
         elif chain_id == Chain.POLYGON:
             collection = self.polygon_db[collection_name]
-        elif chain_id == Chain.ARBITRUM:
-            collection = self.arbitrum_db[collection_name]
-        elif chain_id == Chain.OPTIMISM:
-            collection = self.optimism_db[collection_name]
-        elif chain_id == Chain.AVALANCHE:
-            collection = self.avalanche_db[collection_name]
-        elif chain_id == Chain.TRON:
-            collection = self.tron_db[collection_name]
         else:
             raise ValueError(f'Chain {chain_id} is not supported')
         return collection
